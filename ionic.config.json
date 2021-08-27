@@ -1,0 +1,7 @@
+{
+  "name": "Noluyok",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
