@@ -8,5 +8,7 @@ export interface Store {
   email: string;
   ownerName: string;
   ownerSurname: string;
+  productsCount: number | null;
   followers: User[] | null;
+  wallet: number;
 }

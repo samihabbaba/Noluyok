@@ -1,21 +1,29 @@
 <ion-tabs>
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="home">
+    <ion-tab-button tab="home" #home [ngClass]="{borderTop: home.selected}">
       <ion-icon name="home-outline"></ion-icon>
       <ion-label>Anasayfa</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="favorites">
+    <ion-tab-button
+      tab="favorites"
+      #favorites
+      [ngClass]="{borderTop: favorites.selected}"
+    >
       <ion-icon name="heart-outline"></ion-icon>
       <ion-label>Favorilerim</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="my-cart">
+    <ion-tab-button tab="my-cart" #cart [ngClass]="{borderTop: cart.selected}">
       <ion-icon name="cart-outline"></ion-icon>
       <ion-label>Sepetim</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="profile">
+    <ion-tab-button
+      tab="profile"
+      #profile
+      [ngClass]="{borderTop: profile.selected}"
+    >
       <ion-icon name="person-outline"></ion-icon>
       <ion-label>Hesabım</ion-label>
     </ion-tab-button>

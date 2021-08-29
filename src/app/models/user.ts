@@ -1,3 +1,4 @@
+import { Address } from 'cluster';
 import { Store } from './store';
 
 export interface User {
@@ -6,5 +7,7 @@ export interface User {
   surname: string;
   phoneNo: number;
   email: string;
+  address: Address;
   followings: Store[];
+  wallet: number;
 }
