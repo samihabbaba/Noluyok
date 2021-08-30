@@ -9,14 +9,15 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
 import { SearchBarComponent } from '../shared/search-bar/search-bar.component';
 import { SearchBarDirective } from '../directives/search-bar/search-bar.directive';
+import { ImageCarouselComponent } from '../shared/image-carousel/image-carousel.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule
+  imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule],
+  declarations: [
+    HomePage,
+    SearchBarComponent,
+    SearchBarDirective,
+    ImageCarouselComponent,
   ],
-  declarations: [HomePage, SearchBarComponent,SearchBarDirective]
 })
 export class HomePageModule {}

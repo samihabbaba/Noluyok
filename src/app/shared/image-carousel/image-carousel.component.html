@@ -1,0 +1,10 @@
+<ion-slides
+  #slider
+  pager="true"
+  class="carousel"
+  [options]="slideOptions"
+>
+  <ion-slide *ngFor="let item of [1, 2, 3]">
+    <img class="ion-no-padding" src="../../assets/images/discount-img.jpg" />
+  </ion-slide>
+</ion-slides>

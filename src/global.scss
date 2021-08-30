@@ -57,6 +57,11 @@
   font-family: "SegoeUI";
 }
 
+ion-content {
+  --ion-padding: 8px;
+  --ion-background-color: var(--ion-color-light);
+}
+
 .search-results {
   top: 57px;
 }
@@ -106,18 +111,23 @@ ion-buttons:focus {
 }
 
 // Customizing Product Slider Bullets
-.product-slider {
+.carousel {
   .swiper-pagination {
-    text-align: left;
     padding-left: 20px;
 
     .swiper-pagination-bullet {
-      background: #ffffff;
+      background: var(--ion-color-primary-contrast);
       opacity: 1;
     }
 
     .swiper-pagination-bullet-active {
       background: var(--ion-color-primary);
     }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel .swiper-pagination {
+    text-align: left;
   }
 }
