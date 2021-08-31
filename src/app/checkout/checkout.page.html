@@ -11,27 +11,27 @@
   <ion-grid>
     <ion-row class="ion-padding-bottom">
       <ion-col class="ion-no-padding">
-        <ion-list lines="full" class="ion-no-margin">
+        <ion-list lines="full" class="ion-no-margin" mode="ios">
           <ion-list-header lines="full" class="ion-no-padding">
             <ion-label style="margin-top: 0"> Kart Bilgileri </ion-label>
           </ion-list-header>
 
-          <ion-item class="ion-no-padding">
+          <ion-item class="ion-no-padding" mode="md">
             <ion-label>Kart sahibi</ion-label>
             <ion-input placeholder="Adı ve Soyadı"></ion-input>
           </ion-item>
 
-          <ion-item class="ion-no-padding">
+          <ion-item class="ion-no-padding" mode="md">
             <ion-label>Kart numarası</ion-label>
             <ion-input placeholder="16 Haneli Kart Numarası"></ion-input>
           </ion-item>
 
-          <ion-item class="ion-no-padding">
+          <ion-item class="ion-no-padding" mode="md">
             <ion-label>Gerçerlilik Tarihi</ion-label>
             <ion-input placeholder="MM / DD"></ion-input>
           </ion-item>
 
-          <ion-item class="ion-no-padding">
+          <ion-item class="ion-no-padding" mode="md">
             <ion-label>CVV</ion-label>
             <ion-input placeholder="3 Haneli Güvenlik Kodu"></ion-input>
           </ion-item>
@@ -41,46 +41,44 @@
 
     <ion-row>
       <ion-col class="ion-no-padding">
-        <ion-list lines="full" class="ion-no-margin">
+        <ion-list lines="full" class="ion-no-margin" mode="ios">
           <ion-list-header lines="full" class="ion-no-padding">
             <ion-label class=""> Kargo Adresi </ion-label>
           </ion-list-header>
 
-          <ion-item class="ion-no-padding">
+          <ion-item class="ion-no-padding" mode="md">
             <ion-label>Adres Başlığı</ion-label>
             <ion-input placeholder="Örnek: İş - Ev"></ion-input>
           </ion-item>
 
-          <ion-item class="ion-no-padding">
+          <ion-item class="ion-no-padding" mode="md">
             <ion-label>Şehir</ion-label>
             <ion-input placeholder="Örnek: Mağusa - Lefkoşa"></ion-input>
           </ion-item>
 
-          <ion-item class="ion-no-padding">
+          <ion-item class="ion-no-padding" mode="md">
             <ion-label>Bölge</ion-label>
             <ion-input placeholder="Köy veya Bölge Adı"></ion-input>
           </ion-item>
 
-          <ion-item class="ion-no-padding">
+          <ion-item class="ion-no-padding" mode="md">
             <ion-label>Sokak</ion-label>
             <ion-input placeholder="Sokak adı"></ion-input>
           </ion-item>
 
-          <ion-item class="ion-no-padding">
+          <ion-item class="ion-no-padding" mode="md">
             <ion-label>Adres Tarifi</ion-label>
             <ion-textarea
               placeholder="Örnek: Işıkları geçince X marketten sola, Z apartmanı daire 5."
             ></ion-textarea>
           </ion-item>
-
-
         </ion-list>
       </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
 
-<ion-footer translucent="true" class="ion-no-border" mode="md">
+<ion-footer translucent="true" mode="md">
   <div class="address">
     <ion-item lines="none">
       Sonrası için bilgilerimi kaydet
@@ -92,19 +90,15 @@
   <div class="cart-total">
     <ion-item lines="none">
       <ion-label>Toplam</ion-label>
-      <ion-label slot="end" class="ion-text-right">$160.00</ion-label>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-label>İndirim</ion-label>
-      <ion-label slot="end" class="ion-text-right">5%</ion-label>
+      <ion-label slot="end" class="ion-text-right">160.00 TL</ion-label>
     </ion-item>
     <ion-item>
       <ion-label>Kargo</ion-label>
-      <ion-label slot="end" class="ion-text-right">$10.00</ion-label>
+      <ion-label slot="end" class="ion-text-right">Ücretsiz</ion-label>
     </ion-item>
     <ion-item lines="none">
       <ion-label>Genel Toplam</ion-label>
-      <ion-label slot="end" class="ion-text-right">$162.00</ion-label>
+      <ion-label slot="end" class="ion-text-right">160.00 TL</ion-label>
     </ion-item>
   </div>
   <ion-toolbar color="translucent">
