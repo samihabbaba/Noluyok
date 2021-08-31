@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { IonFooter } from '@ionic/angular';
 
 @Component({
   selector: 'app-checkout',

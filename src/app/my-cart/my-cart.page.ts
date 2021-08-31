@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CartItem } from '../models/cart-item';
 import { CartService } from '../services/cart/cart.service';
 
