@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' },
@@ -17,6 +18,15 @@ const routes: Routes = [
     path: 'checkout',
     loadChildren: () =>
       import('./checkout/checkout.module').then((m) => m.CheckoutPageModule),
+    canLoad: [AuthGuard],
+  },
+  {
+    path: 'payment-success',
+    loadChildren: () =>
+      import('./payment-success/payment-success.module').then(
+        (m) => m.PaymentSuccessPageModule
+      ),
+    canLoad: [AuthGuard],
   },
   {
     path: 'product/:id',

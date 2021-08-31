@@ -1,9 +1,53 @@
 <ion-header mode="md">
   <ion-toolbar>
-    <ion-title>my-cart</ion-title>
+    <ion-title> Sepetim </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+  <div class="cart-items">
+    <ion-card mode="ios" *ngFor="let item of cart">
+      <ion-card-content>
+        <div class="item-img">
+          <img src="../../assets/images/cart3.png" />
+        </div>
 
+        <div class="item-info">
+          <p>{{item.product.name}}</p>
+          <p>{{item.store.name}}</p>
+          <div class="prices">
+            <p [ngClass]="{discount: item.product.discountPrice}">
+              {{item.product.price * item.quantity}} TL
+            </p>
+            <p *ngIf="item.product.discountPrice">
+              {{item.product.discountPrice * item.quantity}} TL
+            </p>
+          </div>
+
+          <div class="qty-selector">
+            <ion-button fill="clear" (click)="decrementQuantity(item)"
+              >-</ion-button
+            >
+            <ion-label>{{item.quantity}}</ion-label>
+            <ion-button fill="clear" (click)="incrementQuantity(item)"
+              >+</ion-button
+            >
+          </div>
+        </div>
+      </ion-card-content>
+      <ion-icon name="trash-outline" class="remove"></ion-icon>
+    </ion-card>
+  </div>
 </ion-content>
+
+<ion-footer translucent="true" class="ion-no-border" mode="md">
+  <ion-toolbar color="translucent">
+    <ion-button
+      expand="block"
+      class="main-button"
+      routerLink="/checkout"
+      routerDirection="forward"
+      >Sepeti Onayla</ion-button
+    >
+  </ion-toolbar>
+</ion-footer>

@@ -7,7 +7,26 @@
     <app-image-carousel></app-image-carousel>
 
     <ion-row>
-      <ion-col size-lg="6" offset-lg="3"> </ion-col>
+      <ion-col size-lg="6" offset-lg="3">
+        <div class="title">
+          <h2>Kategoriler</h2>
+
+          <p>Tümünü Gör</p>
+        </div>
+
+        <div class="category-slider ion-padding-start">
+          <ion-slides
+            [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }"
+          >
+            <ion-slide *ngFor="let category of categories">
+              <ion-col>
+                <h4>{{ category.name }}</h4>
+                <img src="{{ category.image }}" />
+              </ion-col>
+            </ion-slide>
+          </ion-slides>
+        </div>
+      </ion-col>
     </ion-row>
 
     <ion-row>

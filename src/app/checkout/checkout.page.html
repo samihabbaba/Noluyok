@@ -1,9 +1,22 @@
-<ion-header>
+<ion-header mode="md">
   <ion-toolbar>
-    <ion-title>checkout</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/my-cart"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-no-padding">Ödeme Bilgileri</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding"> </ion-content>
 
-</ion-content>
+<ion-footer translucent="true" class="ion-no-border" mode="md">
+  <ion-toolbar color="translucent">
+    <ion-button
+      expand="block"
+      class="main-button"
+      routerLink="/payment-success"
+      routerDirection="forward"
+      >Satın Al</ion-button
+    >
+  </ion-toolbar>
+</ion-footer>
