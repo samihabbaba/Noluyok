@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../models/product';
+import { ProductService } from '../services/product/product.service';
 
 @Component({
   selector: 'app-favorites',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favorites.page.scss'],
 })
 export class FavoritesPage implements OnInit {
+  products: Product[];
 
-  constructor() { }
+  constructor(private productService: ProductService) {}
 
   ngOnInit() {
+    this.products = [...this.productService.products];
   }
-
 }

@@ -16,7 +16,7 @@
 
         <div class="category-slider ion-padding-start">
           <ion-slides
-            [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }"
+            [options]="sliderOptions"
           >
             <ion-slide *ngFor="let category of categories">
               <ion-col>
@@ -40,7 +40,7 @@
         <div class="product-slider">
           <ion-slides
             class="ion-no-padding"
-            [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }"
+            [options]="sliderOptions"
           >
             <ion-slide *ngFor="let product of products">
               <ion-col
@@ -62,7 +62,7 @@
           <h2>Markalar</h2>
         </div>
 
-        <ion-slides mode="ios" [options]="brandSliderOptions">
+        <ion-slides mode="ios" [options]="sliderOptions">
           <ion-slide
             *ngFor="let item of [1,2,3,4,5,6,7,1,2,3,4,5]"
             class="brand-slide"

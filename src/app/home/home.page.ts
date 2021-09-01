@@ -9,7 +9,7 @@ import { ProductService } from '../services/product/product.service';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  brandSliderOptions = {
+  sliderOptions = {
     slidesPerView: 'auto',
     zoom: false,
     grabCursor: true,

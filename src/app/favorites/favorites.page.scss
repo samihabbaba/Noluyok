@@ -1,0 +1,16 @@
+.card-container {
+  padding: 0;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 8px;
+  height: 255px;
+  cursor: pointer;
+  position: relative;
+}
+
+ion-col {
+  height: auto;
+  padding: 8px;
+}
+
+

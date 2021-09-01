@@ -21,5 +21,6 @@ import { ProductCardComponent } from '../shared/product-card/product-card.compon
     ImageCarouselComponent,
     ProductCardComponent,
   ],
+  exports: [ProductCardComponent]
 })
 export class HomePageModule {}
