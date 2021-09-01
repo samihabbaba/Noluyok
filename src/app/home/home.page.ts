@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../models/product';
 import { CategoriesService } from '../services/categories/categories.service';
+import { ProductService } from '../services/product/product.service';
 
 @Component({
   selector: 'app-home',
@@ -13,10 +15,14 @@ export class HomePage implements OnInit {
     grabCursor: true,
   };
   categories: any[];
-  constructor(private categoriesService: CategoriesService) {}
+  products: Product[];
+  constructor(
+    private categoriesService: CategoriesService,
+    private productService: ProductService
+  ) {}
 
   ngOnInit() {
     this.categories = this.categoriesService.categories;
+    this.products = this.productService.products;
   }
-
 }

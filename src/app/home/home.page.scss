@@ -85,35 +85,29 @@ ion-col {
   }
 }
 
-
-
-
 .product-slider {
-  margin-bottom: 30px;
-
   ion-slide {
-      width: 150px;
-      height: auto;
-      margin-left: 20px;
-      margin-right: 10px;
+    width: 180px;
+    height: auto;
+    padding: 8px;
 
-      ion-col {
-          img {
-              width: 100%;
-              height: 180px;
-              object-fit: cover;
-              border-radius: 8px;
-          }
-
-          p {
-              margin-top: 5px;
-              margin-bottom: 0;
-          }
-
-          h6 {
-              margin-top: 5px;
-              margin-bottom: 0;
-          }
-      }
+    ion-col {
+      padding: 0;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      border-radius: 8px;
+      height: 255px;
+      cursor: pointer;
+      position: relative;
+    }
   }
+}
+
+// Removing highlight when focused/clicked on product
+ion-slide:focus {
+  outline: none !important;
+}
+
+ion-col:focus {
+  outline: none !important;
 }

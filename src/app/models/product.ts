@@ -4,17 +4,18 @@ import { Store } from './store';
 export interface Product {
   id: string;
   title: string;
-  description: string | null;
-  category: Category;
-  colors: Color[] | null;
-  sizes: Size[] | null;
-  images: any[];
-  views: number | null;
-  stock: number;
-  store: Store;
+  description?: string | null;
+  category: Category | any;
+  colors?: Color[] | null;
+  sizes?: Size[] | null;
+  images?: any[] | null;
+  views?: number | null;
+  stock?: number | null;
+  store: Store | any;
   price: number;
   discountPrice: number | null;
   shippingPrice: number | null;
+  isFavorite?: boolean | null
 }
 
 export interface Color {

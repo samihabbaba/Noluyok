@@ -1,3 +1,29 @@
-<ion-card>
-  <img src="../../../assets/images/cart3.png" />
-</ion-card>
+<img src="{{ product.images[0] }}" />
+<div class="card-content">
+  <span class="product-text">
+    <b>{{ product.store.storeName }}</b>
+    &nbsp; {{ product.title }}
+  </span>
+  <div class="price-container">
+    <p class="price" [ngClass]="{ discount: product.discountPrice }">
+      {{ product.price }} TL
+    </p>
+    <p class="discount-price" *ngIf="product.discountPrice">
+      {{ product.discountPrice }} TL
+    </p>
+  </div>
+</div>
+
+<ion-icon
+  *ngIf="!product.isFavorite"
+  class="like-icon"
+  name="heart-outline"
+  (click)="addToFavorite(product, $event)"
+></ion-icon>
+<ion-icon
+  *ngIf="product.isFavorite"
+  color="primary"
+  (click)="addToFavorite(product, $event)"
+  class="like-icon"
+  name="heart"
+></ion-icon>
