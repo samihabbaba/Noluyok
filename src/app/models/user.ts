@@ -7,6 +7,7 @@ export interface User {
   surname: string;
   phoneNo: number;
   email: string;
+  password: string;
   address: Address;
   followings: Store[];
   wallet: number;
