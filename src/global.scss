@@ -132,4 +132,12 @@ ion-buttons:focus {
   }
 }
 
+// Removing highlight when focused/clicked on product
 
+ion-slide:focus {
+  outline: none !important;
+}
+
+ion-col:focus {
+  outline: none !important;
+}
