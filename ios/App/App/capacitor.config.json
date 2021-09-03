@@ -1,12 +1,9 @@
 {
-  "appId": "com.noluyok",
-  "appName": "Noluyok",
-  "webDir": "www",
-  "bundledWebRuntime": false,
-  "server": {
-    "url": "http://192.168.31.101:8101"
-  },
-  "ios": {
-    "contentInset": "always"
-  }
+	"appId": "com.noluyok",
+	"appName": "Noluyok",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"server": {
+		"url": "http://localhost:8100"
+	}
 }
