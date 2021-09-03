@@ -1,6 +1,6 @@
 <ion-header mode="md">
   <app-search-bar
-  #searchBar
+    #searchBar
     (onSearchBlur)="searchFocused = false"
     (onSearchFocus)="searchFocused = true"
   ></app-search-bar>
@@ -78,6 +78,7 @@
   </ion-grid>
 </ion-content>
 
-<ion-content *ngIf="searchFocused" class="ion-padding" [@contentAnimation]>
-  <h1>FUCKKK</h1>
-</ion-content>
+<app-search-results
+  *ngIf="searchFocused"
+  [@contentAnimation]
+></app-search-results>

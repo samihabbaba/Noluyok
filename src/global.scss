@@ -59,11 +59,10 @@
 
 ion-content {
   --ion-padding: 8px;
-  // --ion-background-color: var(--ion-color-light);
 }
 
-.search-results {
-  top: 56px;
+app-search-results {
+  height: 100%;
 }
 
 .main-button {
@@ -98,17 +97,6 @@ ion-buttons:focus {
   outline: none !important;
 }
 
-.notification {
-  span {
-    background-color: #f5576c;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    top: 10%;
-    right: 10%;
-  }
-}
 
 // Customizing Product Slider Bullets
 .carousel {
@@ -133,7 +121,6 @@ ion-buttons:focus {
 }
 
 // Removing highlight when focused/clicked on product
-
 ion-slide:focus {
   outline: none !important;
 }
