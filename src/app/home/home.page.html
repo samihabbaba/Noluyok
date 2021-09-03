@@ -2,7 +2,7 @@
   <app-search-bar></app-search-bar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding" id="content">
   <ion-grid>
     <app-image-carousel></app-image-carousel>
 
@@ -15,9 +15,7 @@
         </div>
 
         <div class="category-slider ion-padding-start">
-          <ion-slides
-            [options]="sliderOptions"
-          >
+          <ion-slides [options]="sliderOptions">
             <ion-slide *ngFor="let category of categories">
               <ion-col>
                 <h4>{{ category.name }}</h4>
@@ -38,10 +36,7 @@
         </div>
 
         <div class="product-slider">
-          <ion-slides
-            class="ion-no-padding"
-            [options]="sliderOptions"
-          >
+          <ion-slides class="ion-no-padding" [options]="sliderOptions">
             <ion-slide *ngFor="let product of products">
               <ion-col
                 class="ion-text-left"

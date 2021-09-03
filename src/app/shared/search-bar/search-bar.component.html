@@ -1,24 +1,25 @@
-<div
-  class="search"
-  [appSearchBar]="searchFocused"
-  (closeSearch)="closeSearch()"
->
-  <ion-item lines="none" class="search-item">
-    <ion-input
-      class="search-input"
-      #searchBar
-      placeholder="Marka, ürün veya kategori ara"
-      (ionFocus)="onFocus()"
-    ></ion-input>
-    <ion-icon
-    color="primary"
-      class="search-icon"
-      [ngClass]="{ notClickable: !searchFocused }"
-      [name]="searchIcon"
-      slot="start"
-      (click)="closeSearch()"
-    ></ion-icon>
-  </ion-item>
-
-  <div class="search-results" [ngClass]="{ active: searchFocused }">ffff</div>
-</div>
+<ion-toolbar>
+  <div
+    class="search"
+    [appSearchBar]="searchFocused"
+    (closeSearch)="closeSearch()"
+  >
+    <ion-item lines="none" class="search-item">
+      <ion-input
+        class="search-input"
+        #searchBar
+        placeholder="Marka, ürün veya kategori ara"
+        (ionFocus)="onFocus()"
+      ></ion-input>
+      <ion-icon
+        color="primary"
+        class="search-icon"
+        [ngClass]="{ notClickable: !searchFocused }"
+        [name]="searchIcon"
+        slot="start"
+        (click)="closeSearch()"
+      ></ion-icon>
+    </ion-item>
+  </div>
+</ion-toolbar>
+<!-- <div class="search-results" [ngClass]="{ active: searchFocused }">ffff</div> -->

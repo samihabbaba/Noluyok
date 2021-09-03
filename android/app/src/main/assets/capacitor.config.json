@@ -2,5 +2,8 @@
 	"appId": "com.noluyok",
 	"appName": "Noluyok",
 	"webDir": "www",
-	"bundledWebRuntime": false
+	"bundledWebRuntime": false,
+  "ios": {
+    "contentInset": "always"
+  }
 }

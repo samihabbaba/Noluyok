@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonInput } from '@ionic/angular';
 import { Product } from '../models/product';
 import { CategoriesService } from '../services/categories/categories.service';
 import { ProductService } from '../services/product/product.service';
@@ -16,10 +17,11 @@ export class HomePage implements OnInit {
   };
   categories: any[];
   products: Product[];
+
   constructor(
     private categoriesService: CategoriesService,
     private productService: ProductService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.categories = this.categoriesService.categories;

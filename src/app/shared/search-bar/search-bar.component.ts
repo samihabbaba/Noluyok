@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonInput } from '@ionic/angular';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { IonInput, IonToolbar } from '@ionic/angular';
 
 @Component({
   selector: 'app-search-bar',
@@ -11,9 +11,10 @@ export class SearchBarComponent implements OnInit {
   searchIcon: string = 'search-outline';
   @ViewChild('searchBar') searchBar: IonInput;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   onFocus() {
     this.searchFocused = true;

@@ -1,11 +1,28 @@
-<ion-header mode="md">
-  <ion-toolbar>
+<ion-header mode="md" #header class="ion-no-border">
+  <ion-toolbar #toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="share-social-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content
+  [fullscreen]="true"
+  scrollEvents="true"
+  [appFadeHeader]="{toolbar:toolbar, header: header}"
+>
+  <ion-card *ngFor="let item of [1,2,3,4,5,6,7,8,9,0,3,5,76,8,2]">
+    <ion-card-header>
+      <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+      <ion-card-title>Awesome Title</ion-card-title>
+    </ion-card-header>
+  </ion-card>
 </ion-content>
