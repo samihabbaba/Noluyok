@@ -1,6 +1,6 @@
 export interface Category {
-  id: string;
-  categoryName: string;
+  id: string | null;
+  categoryName: string | null;
   parentId: string | null;
   itemsCount: number | null;
   childNodes: Category[] | null;

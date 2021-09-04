@@ -2,8 +2,8 @@ import { Category } from './cateogory';
 import { Store } from './store';
 
 export interface Product {
-  id: string;
-  title: string;
+  id: string | null
+  title: string | null;
   description?: string | null;
   category: Category | any;
   colors?: Color[] | null;
@@ -12,7 +12,7 @@ export interface Product {
   views?: number | null;
   stock?: number | null;
   store: Store | any;
-  price: number;
+  price: number | null;
   discountPrice: number | null;
   shippingPrice: number | null;
   isFavorite?: boolean | null

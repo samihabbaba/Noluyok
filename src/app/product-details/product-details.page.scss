@@ -10,3 +10,41 @@ ion-content {
   position: absolute;
 }
 
+.product-image-slider {
+  height: 45vh;
+  ion-slide {
+    padding: 0;
+    ion-img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .product-image-slider {
+    height: 50vh;
+    ion-slide ion-img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+
+.product-title {
+  color: #2a2a2a;
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 550;
+}
+
+.seperator {
+  hr {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background: #e2e2e2;
+  }
+}
