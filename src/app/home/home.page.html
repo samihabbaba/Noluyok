@@ -37,7 +37,7 @@
           <p routerLink="/home/products">Tümünü Gör</p>
         </div>
 
-        <div class="product-slider">
+        <div class="product-slider" *ngIf="products">
           <ion-slides class="ion-no-padding" [options]="sliderOptions">
             <ion-slide *ngFor="let product of products">
               <ion-col
@@ -49,6 +49,20 @@
               </ion-col>
             </ion-slide>
           </ion-slides>
+        </div>
+
+        <div  class="product-slider"  *ngIf="!products">
+
+          <ion-slides class="ion-no-padding" [options]="sliderOptions">
+            <ion-slide *ngFor="let product of [1,2,3]">
+              <ion-col
+                class="ion-text-left"
+              >
+                <app-product-card-skeleton></app-product-card-skeleton>
+              </ion-col>
+            </ion-slide>
+          </ion-slides>
+
         </div>
       </ion-col>
     </ion-row>

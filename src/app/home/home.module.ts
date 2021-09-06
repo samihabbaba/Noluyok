@@ -12,9 +12,16 @@ import { SearchBarDirective } from '../directives/search-bar/search-bar.directiv
 import { ImageCarouselComponent } from '../shared/image-carousel/image-carousel.component';
 import { ProductCardComponent } from '../shared/product-card/product-card.component';
 import { SearchResultsComponent } from '../shared/search-results/search-results.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    HomePageRoutingModule,
+    SharedModule,
+  ],
   declarations: [
     HomePage,
     SearchBarComponent,
@@ -23,6 +30,6 @@ import { SearchResultsComponent } from '../shared/search-results/search-results.
     ImageCarouselComponent,
     ProductCardComponent,
   ],
-  exports: [ProductCardComponent]
+  exports: [ProductCardComponent],
 })
 export class HomePageModule {}

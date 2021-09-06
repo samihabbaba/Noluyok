@@ -31,7 +31,11 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.categories = this.categoriesService.categories;
-    this.products = this.productService.products;
+
+    setTimeout(() => {
+
+      this.products = this.productService.products;
+    }, 2000);
   }
 
   ionViewWillLeave() {
