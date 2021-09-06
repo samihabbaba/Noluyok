@@ -10,28 +10,6 @@ ion-content {
   position: absolute;
 }
 
-.seperator {
-  padding: 8px 0;
-  hr {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    background: #e2e2e2;
-    margin: 0;
-  }
-}
-
-.tags-slider {
-  ion-slide {
-    width: max-content !important;
-
-    ion-chip {
-      margin: 0 6px;
-      white-space: nowrap;
-    }
-  }
-}
-
 .product-image-slider {
   height: 45vh;
   ion-slide {
@@ -55,7 +33,7 @@ ion-content {
 }
 
 .product-title {
-  color: #2a2a2a;
+  color: var(--ion-color-header);
   font-size: 22px;
   font-weight: 600;
   margin: 0;
@@ -75,24 +53,25 @@ ion-content {
     font-weight: 600;
     &.discount {
       font-weight: 500;
-      color: #2a2a2a;
+      color: var(--ion-color-header);
       font-size: 17px;
       text-decoration: line-through;
     }
   }
 }
 
-// .product-views {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   margin: 0;
-//   color: var(--ion-color-primary);
-//   font-size: 18px;
-// }
+.tags-slider {
+  ion-slide {
+    width: max-content !important;
+    ion-chip {
+      margin: 0 6px;
+      white-space: nowrap;
+    }
+  }
+}
 
 .store-name {
-  color: #656565;
+  color: var(--ion-color-muted);
   display: flex;
   align-items: center;
   a {
@@ -116,26 +95,26 @@ ion-content {
   padding-top: 8px;
   display: flex;
   align-items: center;
-  color: #656565;
+  color: var(--ion-color-muted);
 
   ion-icon {
     margin-right: 6px;
   }
   b {
-    color: #2a2a2a;
+    color: var(--ion-color-header);
     margin-left: 6px;
   }
 }
 
 .seller-offers {
   h5 {
-    color: #2a2a2a;
+    color: var(--ion-color-header);
     margin: 0;
     margin-bottom: 8px;
   }
 
   p {
-    color: #656565;
+    color: var(--ion-color-muted);
     margin: 0;
     display: flex;
     align-items: center;
@@ -148,12 +127,12 @@ ion-content {
 
 .description {
   h5 {
-    color: #2a2a2a;
+    color: var(--ion-color-header);
     margin: 0;
   }
 
   p {
-    color: #656565;
+    color: var(--ion-color-muted);
     margin: 0;
     margin-top: 8px;
   }
@@ -161,7 +140,7 @@ ion-content {
 
 .variation {
   ion-segment-button {
-    color: #2a2a2a;
+    color: var(--ion-color-header);
   }
 }
 
@@ -221,7 +200,7 @@ ion-footer {
 }
 
 .slider-title {
-  color: #2a2a2a;
+  color: var(--ion-color-header);
   margin: 0;
   margin-bottom: 8px;
 }

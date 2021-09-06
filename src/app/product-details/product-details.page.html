@@ -48,13 +48,7 @@
       </ion-row>
     </div>
 
-    <ion-row>
-      <ion-col size-lg="6" offset-lg="3">
-        <div class="seperator">
-          <hr />
-        </div>
-      </ion-col>
-    </ion-row>
+    <app-seperator></app-seperator>
 
     <ion-row>
       <ion-col size-lg="6" offset-lg="3">
@@ -62,6 +56,13 @@
           class="tags-slider ion-no-padding"
           [options]="sliderOptions"
         >
+          <ion-slide>
+            <ion-chip mode="ios" class="ion-no-margin" color="tertiary">
+              <ion-label color="primary"
+                >{{product.views}} kişi inceledi</ion-label
+              >
+            </ion-chip>
+          </ion-slide>
           <ion-slide *ngFor="let tag of product.tags">
             <ion-chip mode="ios" class="ion-no-margin" color="tertiary">
               <ion-label color="primary">{{tag}}</ion-label>
@@ -71,13 +72,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col size-lg="6" offset-lg="3">
-        <div class="seperator">
-          <hr />
-        </div>
-      </ion-col>
-    </ion-row>
+    <app-seperator></app-seperator>
 
     <ion-row class="ion-padding ion-align-items-center">
       <ion-col size-lg="6" offset-lg="3">
@@ -95,13 +90,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col size-lg="6" offset-lg="3">
-        <div class="seperator">
-          <hr />
-        </div>
-      </ion-col>
-    </ion-row>
+    <app-seperator></app-seperator>
 
     <ion-row class="ion-padding ion-align-items-center">
       <ion-col size-lg="6" offset-lg="3">
@@ -120,13 +109,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col size-lg="6" offset-lg="3">
-        <div class="seperator">
-          <hr />
-        </div>
-      </ion-col>
-    </ion-row>
+    <app-seperator></app-seperator>
 
     <ion-row class="ion-padding ion-align-items-center">
       <ion-col size-lg="6" offset-lg="3">
@@ -138,13 +121,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col size-lg="6" offset-lg="3">
-        <div class="seperator">
-          <hr />
-        </div>
-      </ion-col>
-    </ion-row>
+    <app-seperator></app-seperator>
 
     <ion-row class="ion-padding-start ion-padding-end">
       <ion-col size-lg="6" offset-lg="3">
@@ -165,13 +142,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col size-lg="6" offset-lg="3">
-        <div class="seperator">
-          <hr />
-        </div>
-      </ion-col>
-    </ion-row>
+    <app-seperator></app-seperator>
 
     <ion-row
       class="ion-padding ion-align-items-center"
@@ -210,13 +181,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col size-lg="6" offset-lg="3">
-        <div class="seperator">
-          <hr />
-        </div>
-      </ion-col>
-    </ion-row>
+    <app-seperator></app-seperator>
 
     <ion-row class="ion-padding ion-align-items-center">
       <ion-col size-lg="6" offset-lg="3">
@@ -237,20 +202,14 @@
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col size-lg="6" offset-lg="3">
-        <div class="seperator">
-          <hr />
-        </div>
-      </ion-col>
-    </ion-row>
+    <app-seperator></app-seperator>
 
     <ion-row
       class="ion-padding-start ion-padding-end"
       style="padding-bottom: 58px"
     >
       <ion-col size-lg="6" offset-lg="3">
-        <ion-button mode="ios" color="danger" expand="full" fill="solid">
+        <ion-button mode="ios" color="danger" expand="full" fill="solid" strong="true">
           Ürünü şikayet et
         </ion-button>
       </ion-col>
