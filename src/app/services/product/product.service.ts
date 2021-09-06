@@ -5,7 +5,7 @@ import { Product } from 'src/app/models/product';
   providedIn: 'root',
 })
 export class ProductService {
-  products: Product[] = [
+  products: any[] = [
     {
       id: '1',
       title: 'Adidas SweatShirt',
