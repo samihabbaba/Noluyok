@@ -4,10 +4,15 @@ ion-slides {
   border-radius: 8px;
 }
 
-
 .slider-image {
   height: 95px;
   width: 100%;
   object-fit: cover;
   border-radius: 8px;
+}
+
+@media screen and (min-width: 992px) {
+  .slider-image {
+    height: 180px;
+  }
 }

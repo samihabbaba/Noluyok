@@ -43,4 +43,5 @@ export class HomePage implements OnInit {
     this.searchFocused = false;
     this.searchBar.closeSearch();
   }
+
 }
