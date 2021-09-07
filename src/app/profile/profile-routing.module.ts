@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path: 'password-change',
     loadChildren: () => import('./password-change/password-change.module').then( m => m.PasswordChangePageModule)
+  },
+  {
+    path: 'open-store',
+    loadChildren: () => import('./open-store/open-store.module').then( m => m.OpenStorePageModule)
   }
 ];
 
