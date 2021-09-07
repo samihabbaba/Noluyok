@@ -1,9 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>products</ion-title>
-  </ion-toolbar>
+<ion-header mode="md">
+  <app-search-bar
+  [isBack]="true"
+    #searchBar
+    (onSearchBlur)="searchFocused = false"
+    (onSearchFocus)="searchFocused = true"
+  ></app-search-bar>
 </ion-header>
 
-<ion-content>
-
+<ion-content *ngIf="!searchFocused" class="ion-padding" [@contentAnimation]>
+  Fuck
 </ion-content>
+
+<app-search-results
+  *ngIf="searchFocused"
+  [@contentAnimation]
+></app-search-results>

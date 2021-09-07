@@ -1,5 +1,12 @@
-import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
-import { IonInput, IonToolbar } from '@ionic/angular';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
+import { IonInput } from '@ionic/angular';
 
 @Component({
   selector: 'app-search-bar',
@@ -12,11 +19,11 @@ export class SearchBarComponent implements OnInit {
   @ViewChild('searchBar') searchBar: IonInput;
   @Output() onSearchFocus = new EventEmitter<any>();
   @Output() onSearchBlur = new EventEmitter<any>();
+  @Input() isBack: boolean;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onFocus() {
     this.searchFocused = true;
@@ -35,8 +42,8 @@ export class SearchBarComponent implements OnInit {
       input.blur();
       this.searchFocused = false;
       this.searchIcon = 'search-outline';
+      this.searchBar.value = '';
       this.onSearchBlur.emit();
     });
   }
-
 }
