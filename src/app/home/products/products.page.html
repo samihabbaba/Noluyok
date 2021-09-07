@@ -1,6 +1,7 @@
 <ion-header mode="md">
   <app-search-bar
-  [isBack]="true"
+    [isBack]="true"
+    [filter]="true"
     #searchBar
     (onSearchBlur)="searchFocused = false"
     (onSearchFocus)="searchFocused = true"

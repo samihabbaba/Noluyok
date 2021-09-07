@@ -47,3 +47,20 @@
     </ion-item>
   </div>
 </ion-toolbar>
+
+<ion-toolbar *ngIf="filter">
+  <ion-buttons>
+    <ion-button style="flex: 1;">
+      <ion-icon slot="start" color="primary" name="funnel-outline"></ion-icon>
+      Click me
+    </ion-button>
+    <ion-button style="flex: 1;">
+      <ion-icon
+        slot="start"
+        color="primary"
+        name="reorder-three-outline"
+      ></ion-icon>
+      Click me
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>

@@ -20,6 +20,7 @@ export class SearchBarComponent implements OnInit {
   @Output() onSearchFocus = new EventEmitter<any>();
   @Output() onSearchBlur = new EventEmitter<any>();
   @Input() isBack: boolean;
+  @Input() filter: boolean;
 
   constructor() {}
 
