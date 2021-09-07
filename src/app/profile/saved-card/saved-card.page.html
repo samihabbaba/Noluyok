@@ -7,4 +7,53 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding"> </ion-content>
+<ion-content class="ion-padding">
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size-lg="6" offset-lg="3">
+        <ion-item class="ion-no-padding" mode="md">
+          <ion-label>Kart Sahibi</ion-label>
+          <ion-input placeholder="Adı ve Soyadı"></ion-input>
+          <ion-icon name="id-card-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item class="ion-no-padding" mode="md">
+          <ion-label>Kart Numarası</ion-label>
+          <ion-input inputmode="numeric" maxlength="16"></ion-input>
+          <ion-icon name="card-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item class="ion-no-padding" mode="md">
+          <ion-label>Gerçerlilik Tarihi</ion-label>
+
+          <ion-datetime
+            display-format="MM/YY"
+            min="2021"
+            max="2080"
+          ></ion-datetime>
+
+          <ion-icon name="calendar-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item class="ion-no-padding" mode="md">
+          <ion-label>CVV</ion-label>
+          <ion-input
+            placeholder="3 Haneli Güvenlik Kodu"
+            inputmode="numeric"
+            maxlength="3"
+          ></ion-input>
+          <ion-icon name="lock-closed-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-button
+          expand="block"
+          class="main-button ion-margin-top"
+          routerLink="/profile"
+          routerDirection="back"
+        >
+          Kaydet</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
