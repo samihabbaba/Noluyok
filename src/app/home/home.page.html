@@ -8,7 +8,11 @@
 
 <ion-content *ngIf="!searchFocused" class="ion-padding" [@contentAnimation]>
   <ion-grid>
-    <app-image-carousel></app-image-carousel>
+    <ion-row>
+      <ion-col size-lg="6"  offset-lg="3">
+        <app-image-carousel></app-image-carousel>
+      </ion-col>
+    </ion-row>
 
     <ion-row>
       <ion-col size-lg="6" offset-lg="3">
@@ -37,8 +41,12 @@
           <p routerLink="/home/products">Tümünü Gör</p>
         </div>
 
-        <div class="product-slider" *ngIf="products">
-          <ion-slides class="ion-no-padding" [options]="sliderOptions">
+        <div class="product-slider">
+          <ion-slides
+            class="ion-no-padding"
+            [options]="sliderOptions"
+            *ngIf="products"
+          >
             <ion-slide *ngFor="let product of products">
               <ion-col
                 class="ion-text-left"
@@ -49,20 +57,18 @@
               </ion-col>
             </ion-slide>
           </ion-slides>
-        </div>
 
-        <div  class="product-slider"  *ngIf="!products">
-
-          <ion-slides class="ion-no-padding" [options]="sliderOptions">
-            <ion-slide *ngFor="let product of [1,2,3]">
-              <ion-col
-                class="ion-text-left"
-              >
+          <ion-slides
+            class="ion-no-padding"
+            [options]="sliderOptions"
+            *ngIf="!products"
+          >
+            <ion-slide *ngFor="let product of [1,2,3,4,5]">
+              <ion-col class="ion-text-left">
                 <app-product-card-skeleton></app-product-card-skeleton>
               </ion-col>
             </ion-slide>
           </ion-slides>
-
         </div>
       </ion-col>
     </ion-row>
@@ -73,16 +79,21 @@
           <h2>Markalar</h2>
         </div>
 
-        <ion-slides mode="ios" [options]="sliderOptions">
+        <ion-slides mode="ios" [options]="sliderOptions" *ngIf="brands">
+          <ion-slide *ngFor="let item of brands" class="brand-slide">
+            <ion-avatar class="brand-image">
+              <ion-img src="../../assets/images/adidas.png"></ion-img>
+            </ion-avatar>
+            <span class="brand-name">Suerte Home</span>
+          </ion-slide>
+        </ion-slides>
+
+        <ion-slides mode="ios" [options]="sliderOptions" *ngIf="!brands">
           <ion-slide
             *ngFor="let item of [1,2,3,4,5,6,7,1,2,3,4,5]"
             class="brand-slide"
           >
-            <ion-avatar class="brand-image">
-              <ion-img src="../../assets/images/adidas.png"></ion-img>
-            </ion-avatar>
-
-            <span class="brand-name">Suerte Home</span>
+            <app-brands-skeleton></app-brands-skeleton>
           </ion-slide>
         </ion-slides>
       </ion-col>

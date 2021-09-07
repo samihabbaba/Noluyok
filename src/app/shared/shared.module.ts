@@ -9,4 +9,4 @@ import { IonicModule } from '@ionic/angular';
   imports: [CommonModule, IonicModule],
   exports: [ProductCardSkeletonComponent, BrandsSkeletonComponent],
 })
-export class SharedModule {}
+export class SharedModule { }

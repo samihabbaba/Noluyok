@@ -16,9 +16,17 @@ export class ImageCarouselComponent implements OnInit {
     speed: 300,
     loop: true,
   };
+  sliderImages: any[];
   @ViewChild('slider') slider: IonSlides;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    setTimeout(() => {
+      this.sliderImages = [];
+      for (let i of [1, 2, 3]) {
+        this.sliderImages.push('../../assets/images/discount-img.jpg');
+      }
+    }, 2000)
+  }
 }

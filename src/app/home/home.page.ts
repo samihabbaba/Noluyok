@@ -21,6 +21,7 @@ export class HomePage implements OnInit {
   @ViewChild('searchBar') searchBar: SearchBarComponent;
   searchFocused: boolean = false;
 
+  brands: any[];
   categories: any[];
   products: Product[];
 
@@ -33,7 +34,7 @@ export class HomePage implements OnInit {
     this.categories = this.categoriesService.categories;
 
     setTimeout(() => {
-
+      this.brands = [1,2,3,4,5,6,7,8,9,0,1,23,4,5,6]
       this.products = this.productService.products;
     }, 2000);
   }
