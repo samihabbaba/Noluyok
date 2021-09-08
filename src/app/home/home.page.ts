@@ -5,7 +5,6 @@ import { Product } from '../models/product';
 import { CategoriesService } from '../services/categories/categories.service';
 import { ProductService } from '../services/product/product.service';
 import { SearchBarService } from '../services/search-bar/search-bar.service';
-import { SearchBarComponent } from '../shared/search-bar/search-bar.component';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +20,6 @@ export class HomePage implements OnInit {
   };
   @ViewChild('searchBar') searchBar: IonInput;
   searchFocused: boolean = false;
-  searchIcon: string = 'search-outline';
 
   brands: any[];
   categories: any[];
@@ -46,15 +44,12 @@ export class HomePage implements OnInit {
   }
 
   // Search bar functions
-
   onFocus() {
     this.searchFocused = true;
-    this.searchIcon = 'arrow-back-outline';
   }
 
   closeSearch() {
     this.searchService.blurAndClear(this.searchBar);
     this.searchFocused = false;
-    this.searchIcon = 'search-outline';
   }
 }

@@ -9,8 +9,8 @@ import { ProductDetailsPageRoutingModule } from './product-details-routing.modul
 import { ProductDetailsPage } from './product-details.page';
 import { HideHeaderDirective } from '../directives/hide-header/hide-header.directive';
 import { FadeHeaderDirective } from '../directives/fade-header/fade-header.directive';
-import { HomePageModule } from '../home/home.module';
 import { SeperatorComponent } from './seperator/seperator.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -18,7 +18,7 @@ import { SeperatorComponent } from './seperator/seperator.component';
     FormsModule,
     IonicModule,
     ProductDetailsPageRoutingModule,
-    HomePageModule
+    SharedModule
   ],
   declarations: [ProductDetailsPage, HideHeaderDirective, FadeHeaderDirective, SeperatorComponent]
 })

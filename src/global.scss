@@ -97,7 +97,6 @@ ion-buttons:focus {
   outline: none !important;
 }
 
-
 // Customizing Product Slider Bullets
 .carousel {
   .swiper-pagination {
@@ -129,27 +128,12 @@ ion-col:focus {
   outline: none !important;
 }
 
-
-
 // Search bar styles
 .search {
+  display: flex;
   .search-item {
     padding: 4px;
-
-    &.isBack {
-      padding-left: 0;
-      padding-right: 0;
-      border-left: 1px solid #f4f4f4;
-
-      .search-icon-text {
-        font-size: 19px;
-        margin-right: 6px;
-      }
-
-      .close-icon {
-        cursor: pointer;
-      }
-    }
+    width: 100%;
 
     .search-input {
       padding-left: 10px !important;
@@ -163,6 +147,23 @@ ion-col:focus {
       &.notClickable {
         pointer-events: none;
       }
+    }
+  }
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 38px;
+  background-color: #f4f4f4;
+}
+
+.toolbar-filtering {
+  ion-buttons {
+    height: 56px;
+
+    ion-button {
+      height: 56px;
+      flex: 1;
     }
   }
 }

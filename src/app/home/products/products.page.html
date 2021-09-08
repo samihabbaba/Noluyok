@@ -1,53 +1,48 @@
-<ion-header mode="md">
+<ion-header mode="md" #header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
-    </ion-buttons>
-
     <div class="search">
-      <ion-item lines="none" class="search-item isBack">
-        <ion-icon
-          name="search-sharp"
-          class="search-icon-text"
-          color="primary"
-        ></ion-icon>
+      <ion-buttons slot="start" class="ion-no-margin">
+        <ion-back-button
+          *ngIf="!searchFocused"
+          defaultHref="/home"
+        ></ion-back-button>
+        <ion-button *ngIf="searchFocused" (click)="closeSearch()">
+          <ion-icon slot="icon-only" color="primary" name="close"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-item lines="none" class="search-item ion-no-padding">
         <ion-input
+          clearInput="true"
+          class="search-input"
           #searchBar
           placeholder="Marka, ürün veya kategori ara"
           (ionFocus)="onFocus()"
         ></ion-input>
-        <ion-icon
-          *ngIf="searchFocused"
-          color="dark"
-          name="close"
-          class="close-icon"
-          slot="end"
-          (click)="closeSearch()"
-        ></ion-icon>
       </ion-item>
     </div>
   </ion-toolbar>
 
-  <ion-toolbar *ngIf="!searchFocused">
+  <ion-toolbar *ngIf="!searchFocused" class="toolbar-filtering" >
     <ion-buttons>
-      <ion-button style="flex: 1">
-        <ion-icon slot="start" color="primary" name="funnel-outline"></ion-icon>
-        Click me
+      <ion-button>
+        <ion-icon slot="end" color="primary" name="funnel-outline"></ion-icon>
+        Filtrele
       </ion-button>
-      <ion-button style="flex: 1">
+      <div class="toolbar-divider"></div>
+      <ion-button>
         <ion-icon
           slot="start"
           color="primary"
           name="reorder-three-outline"
         ></ion-icon>
-        Click me
+        Sırala
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content *ngIf="!searchFocused" class="ion-padding" [@contentAnimation]>
-  Fuck
+  Fucks
 </ion-content>
 
 <app-search-results

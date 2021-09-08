@@ -1,21 +1,27 @@
 <ion-header mode="md">
   <ion-toolbar>
     <div class="search">
-      <ion-item lines="none" class="search-item">
+      <ion-buttons slot="start" class="ion-no-margin">
+        <ion-button *ngIf="!searchFocused" (click)="searchBar.setFocus()">
+          <ion-icon
+            slot="icon-only"
+            color="primary"
+            name="search-outline"
+          ></ion-icon>
+        </ion-button>
+        <ion-button *ngIf="searchFocused" (click)="closeSearch()">
+          <ion-icon slot="icon-only" color="primary" name="close"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-item lines="none" class="search-item ion-no-padding">
         <ion-input
+          clearInput="true"
           class="search-input"
           #searchBar
           placeholder="Marka, ürün veya kategori ara"
           (ionFocus)="onFocus()"
         ></ion-input>
-        <ion-icon
-          color="primary"
-          class="search-icon"
-          [ngClass]="{ notClickable: !searchFocused }"
-          [name]="searchIcon"
-          slot="start"
-          (click)="closeSearch()"
-        ></ion-icon>
       </ion-item>
     </div>
   </ion-toolbar>
