@@ -26,6 +26,11 @@ export class SearchBarComponent implements OnInit {
 
   ngOnInit() {}
 
+  ngOnDestroy() {
+    this.isBack = null;
+    this.filter = null;
+  }
+
   onFocus() {
     this.searchFocused = true;
     this.searchIcon = 'arrow-back-outline';

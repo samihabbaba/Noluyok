@@ -1,60 +1,62 @@
-<ion-toolbar *ngIf="!isBack">
-  <div class="search">
-    <ion-item lines="none" class="search-item">
-      <ion-input
-        class="search-input"
-        #searchBar
-        placeholder="Marka, ürün veya kategori ara"
-        (ionFocus)="onFocus()"
-      ></ion-input>
-      <ion-icon
-        color="primary"
-        class="search-icon"
-        [ngClass]="{ notClickable: !searchFocused }"
-        [name]="searchIcon"
-        slot="start"
-        (click)="closeSearch()"
-      ></ion-icon>
-    </ion-item>
+<!-- <ion-toolbar> -->
+<div class="search" *ngIf="!isBack">
+  <ion-item lines="none" class="search-item">
+    <ion-input
+      class="search-input"
+      #searchBar
+      placeholder="Marka, ürün veya kategori ara"
+      (ionFocus)="onFocus()"
+    ></ion-input>
+    <ion-icon
+      color="primary"
+      class="search-icon"
+      [ngClass]="{ notClickable: !searchFocused }"
+      [name]="searchIcon"
+      slot="start"
+      (click)="closeSearch()"
+    ></ion-icon>
+  </ion-item>
+</div>
+<!-- </ion-toolbar> -->
+
+<ion-toolbar>
+  <div>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <div class="search">
+      <ion-item lines="none" class="search-item isBack">
+        <ion-icon
+          name="search-sharp"
+          class="search-icon-text"
+          color="primary"
+        ></ion-icon>
+        <ion-input
+          #searchBar
+          placeholder="Marka, ürün veya kategori ara"
+          (ionFocus)="onFocus()"
+        ></ion-input>
+        <ion-icon
+          *ngIf="searchFocused"
+          color="dark"
+          name="close"
+          class="close-icon"
+          slot="end"
+          (click)="closeSearch()"
+        ></ion-icon>
+      </ion-item>
+    </div>
   </div>
 </ion-toolbar>
 
-<ion-toolbar *ngIf="isBack">
-  <ion-buttons slot="start">
-    <ion-back-button defaultHref="/home"></ion-back-button>
-  </ion-buttons>
-
-  <div class="search">
-    <ion-item lines="none" class="search-item isBack">
-      <ion-icon
-        name="search-sharp"
-        class="search-icon-text"
-        color="primary"
-      ></ion-icon>
-      <ion-input
-        #searchBar
-        placeholder="Marka, ürün veya kategori ara"
-        (ionFocus)="onFocus()"
-      ></ion-input>
-      <ion-icon
-        *ngIf="searchFocused"
-        color="dark"
-        name="close"
-        class="close-icon"
-        slot="end"
-        (click)="closeSearch()"
-      ></ion-icon>
-    </ion-item>
-  </div>
-</ion-toolbar>
-
-<ion-toolbar *ngIf="filter">
+<ion-toolbar>
   <ion-buttons>
-    <ion-button style="flex: 1;">
+    <ion-button style="flex: 1">
       <ion-icon slot="start" color="primary" name="funnel-outline"></ion-icon>
       Click me
     </ion-button>
-    <ion-button style="flex: 1;">
+    <ion-button style="flex: 1">
       <ion-icon
         slot="start"
         color="primary"

@@ -1,15 +1,30 @@
 <ion-header mode="md">
-  <app-search-bar
-    #searchBar
-    (onSearchBlur)="searchFocused = false"
-    (onSearchFocus)="searchFocused = true"
-  ></app-search-bar>
+  <ion-toolbar>
+    <div class="search">
+      <ion-item lines="none" class="search-item">
+        <ion-input
+          class="search-input"
+          #searchBar
+          placeholder="Marka, ürün veya kategori ara"
+          (ionFocus)="onFocus()"
+        ></ion-input>
+        <ion-icon
+          color="primary"
+          class="search-icon"
+          [ngClass]="{ notClickable: !searchFocused }"
+          [name]="searchIcon"
+          slot="start"
+          (click)="closeSearch()"
+        ></ion-icon>
+      </ion-item>
+    </div>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content *ngIf="!searchFocused" class="ion-padding" [@contentAnimation]>
   <ion-grid>
     <ion-row>
-      <ion-col size-lg="6"  offset-lg="3">
+      <ion-col size-lg="6" offset-lg="3">
         <app-image-carousel></app-image-carousel>
       </ion-col>
     </ion-row>

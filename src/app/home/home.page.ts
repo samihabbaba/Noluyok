@@ -4,6 +4,7 @@ import { ContentAnimation } from '../animations/search-animation';
 import { Product } from '../models/product';
 import { CategoriesService } from '../services/categories/categories.service';
 import { ProductService } from '../services/product/product.service';
+import { SearchBarService } from '../services/search-bar/search-bar.service';
 import { SearchBarComponent } from '../shared/search-bar/search-bar.component';
 
 @Component({
@@ -18,8 +19,9 @@ export class HomePage implements OnInit {
     zoom: false,
     grabCursor: true,
   };
-  @ViewChild('searchBar') searchBar: SearchBarComponent;
+  @ViewChild('searchBar') searchBar: IonInput;
   searchFocused: boolean = false;
+  searchIcon: string = 'search-outline';
 
   brands: any[];
   categories: any[];
@@ -27,7 +29,7 @@ export class HomePage implements OnInit {
 
   constructor(
     private categoriesService: CategoriesService,
-    private productService: ProductService
+    private productService: ProductService, private searchService: SearchBarService
   ) { }
 
   ngOnInit() {
@@ -40,8 +42,19 @@ export class HomePage implements OnInit {
   }
 
   ionViewWillLeave() {
-    this.searchFocused = false;
-    this.searchBar.closeSearch();
+    this.closeSearch();
   }
 
+  // Search bar functions
+
+  onFocus() {
+    this.searchFocused = true;
+    this.searchIcon = 'arrow-back-outline';
+  }
+
+  closeSearch() {
+    this.searchService.blurAndClear(this.searchBar);
+    this.searchFocused = false;
+    this.searchIcon = 'search-outline';
+  }
 }
