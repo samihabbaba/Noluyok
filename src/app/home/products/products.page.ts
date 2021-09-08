@@ -1,5 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { IonHeader, IonInput, NavController } from '@ionic/angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonInput, MenuController } from '@ionic/angular';
 import { ContentAnimation } from 'src/app/animations/search-animation';
 import { SearchBarService } from 'src/app/services/search-bar/search-bar.service';
 
@@ -14,7 +14,10 @@ export class ProductsPage implements OnInit {
   @ViewChild('searchBar') searchBar: IonInput;
   @ViewChild('header') header: any;
 
-  constructor(private searchService: SearchBarService, private navCtrl: NavController) {}
+  constructor(
+    private searchService: SearchBarService,
+    private menuController: MenuController
+  ) {}
 
   ngOnInit() {}
 
@@ -24,7 +27,7 @@ export class ProductsPage implements OnInit {
   }
 
   onFocus() {
-      this.searchFocused = true;
+    this.searchFocused = true;
   }
 
   closeSearch() {
@@ -32,5 +35,7 @@ export class ProductsPage implements OnInit {
     this.searchFocused = false;
   }
 
-
+  toggleFilterMenu() {
+    this.menuController.toggle('filter');
+  }
 }

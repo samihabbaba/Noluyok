@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { FiltersMenuComponent } from './filters-menu/filters-menu.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
     SearchResultsComponent,
     ImageCarouselComponent,
     ProductCardComponent,
+    FiltersMenuComponent
   ],
   imports: [CommonModule, IonicModule],
   exports: [
@@ -22,6 +24,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
     SearchResultsComponent,
     ImageCarouselComponent,
     ProductCardComponent,
+    FiltersMenuComponent
   ],
 })
 export class SharedModule {}

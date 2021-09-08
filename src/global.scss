@@ -161,9 +161,10 @@ ion-col:focus {
   ion-buttons {
     height: 56px;
 
-    ion-button {
+    ion-button, ion-menu-button {
       height: 56px;
       flex: 1;
     }
   }
 }
+
