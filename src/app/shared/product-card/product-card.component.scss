@@ -11,6 +11,7 @@ img {
   padding-top: 0;
 
   .price-container {
+    font-size: 16px;
     display: flex;
     .price {
       margin: 0;
@@ -19,7 +20,7 @@ img {
 
       &.discount {
         text-decoration: line-through;
-        color: #434343 !important;
+        color: #2a2a2a !important;
         font-weight: 500;
       }
     }
@@ -39,7 +40,7 @@ img {
     margin-bottom: 8px;
     display: -webkit-box;
     margin: 0;
-    color: #434343;
+    color: #2a2a2a;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;

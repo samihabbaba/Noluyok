@@ -6,7 +6,7 @@
   *ngIf="sliderImages"
 >
   <ion-slide *ngFor="let img of sliderImages">
-      <img class="ion-no-padding slider-image" [src]="img" />
+    <img class="ion-no-padding slider-image" [src]="img" />
   </ion-slide>
 </ion-slides>
 
@@ -17,6 +17,9 @@
   *ngIf="!sliderImages"
 >
   <ion-slide *ngFor="let img of [1, 2, 3]">
-      <ion-skeleton-text animated class="slider-image"></ion-skeleton-text>
+    <ion-skeleton-text
+      animated
+      class="ion-no-padding slider-image"
+    ></ion-skeleton-text>
   </ion-slide>
 </ion-slides>

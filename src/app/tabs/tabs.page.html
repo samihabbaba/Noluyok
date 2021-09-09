@@ -1,41 +1,30 @@
 <ion-tabs>
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="home" #home [ngClass]="{borderTop: home.selected}">
-      <ion-icon name="home-outline"></ion-icon>
-      <ion-label>Anasayfa</ion-label>
+    <ion-tab-button tab="home" #home>
+      <ion-icon [name]="home.selected ? 'home' : 'home-outline'"></ion-icon>
+      <!-- <ion-label>Anasayfa</ion-label> -->
     </ion-tab-button>
 
-    <ion-tab-button
-      tab="favorites"
-      #favorites
-      [ngClass]="{borderTop: favorites.selected}"
-    >
-      <ion-icon name="heart-outline"></ion-icon>
-      <ion-label>Favorilerim</ion-label>
+    <ion-tab-button tab="favorites" #favorites>
+      <ion-icon [name]="favorites.selected ? 'heart' : 'heart-outline'"></ion-icon>
+      <!-- <ion-label>Favorilerim</ion-label> -->
     </ion-tab-button>
 
-    <ion-tab-button tab="my-cart" #cart [ngClass]="{borderTop: cart.selected}">
-      <ion-icon name="cart-outline"></ion-icon>
-      <ion-label>Sepetim</ion-label>
+    <ion-tab-button tab="my-cart" #cart>
+      <ion-icon
+        [name]="cart.selected ? 'cart' : 'cart-outline'"
+      ></ion-icon>
+      <!-- <ion-label>Sepetim</ion-label> -->
     </ion-tab-button>
 
-    <ion-tab-button
-      tab="profile"
-      #profile
-      [ngClass]="{borderTop: profile.selected}"
-    >
-      <ion-icon name="person-outline"></ion-icon>
-      <ion-label>Hesabım</ion-label>
+    <ion-tab-button tab="profile" #profile>
+      <ion-icon [name]="profile.selected ? 'person' : 'person-outline'"></ion-icon>
+      <!-- <ion-label>Hesabım</ion-label> -->
     </ion-tab-button>
 
-
-    <ion-tab-button
-      tab="store"
-      #shop
-      [ngClass]="{borderTop: shop.selected}"
-    >
-      <ion-icon name="storefront-outline"></ion-icon>
-      <ion-label>Mağazam</ion-label>
+    <ion-tab-button tab="store" #shop>
+      <ion-icon [name]="shop.selected ? 'storefront' : 'storefront-outline'"></ion-icon>
+      <!-- <ion-label>Mağazam</ion-label> -->
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>

@@ -1,6 +1,9 @@
 .header-md::after {
   background: none !important;
 }
+.header {
+  color: #323232;
+}
 
 .container h1 {
   margin-top: 0;
@@ -29,11 +32,13 @@
 }
 
 .sign-up {
+  color: #a3a3a3;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .sign-up ion-button {
+  color: #404040;
   margin: 0;
 }

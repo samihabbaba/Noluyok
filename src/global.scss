@@ -66,6 +66,7 @@ app-search-results {
 }
 
 .main-button {
+  color: #ffffff;
   --background: linear-gradient(
     90deg,
     rgba(102, 126, 234, 1) 0%,
@@ -89,6 +90,7 @@ app-search-results {
   box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 1);
 }
 
+// Removing ion-button focus outline
 ion-button:focus {
   outline: none !important;
 }
@@ -97,13 +99,22 @@ ion-buttons:focus {
   outline: none !important;
 }
 
+// Removing iOS and Android Header line for entire app
+ion-toolbar {
+  --border-width: 0 !important;
+}
+
+.header-md::after {
+  background: none;
+}
+
 // Customizing Product Slider Bullets
 .carousel {
   .swiper-pagination {
     padding-left: 20px;
 
     .swiper-pagination-bullet {
-      background: var(--ion-color-primary-contrast);
+      background: #ffffff;
       opacity: 1;
     }
 

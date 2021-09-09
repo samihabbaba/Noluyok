@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button routerLink="/auth" routerDirection="back">
-        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        <img src="../../../assets/back.svg">
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -10,7 +10,7 @@
 
 <ion-content class="ion-padding">
   <div class="ion-padding container">
-    <h1>Giriş Yap</h1>
+    <h1 class="header">Giriş Yap</h1>
 
     <div class="form-container">
       <ion-item>
@@ -30,7 +30,6 @@
       <div class="sign-up">
         Hesabın yok mu?
         <ion-button
-          color="primary"
           fill="clear"
           routerLink="/auth/signup"
           routerDirection="forward"
