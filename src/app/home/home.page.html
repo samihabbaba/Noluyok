@@ -1,6 +1,29 @@
-<ion-header mode="md">
-  <ion-toolbar>
+<ion-header class="ion-no-padding">
+  <ion-toolbar class="ion-no-padding">
     <div class="search">
+      <ion-item lines="none">
+        <div class="search-seperator"></div>
+        <ion-input
+          #searchBar
+          placeholder="Marka, ürün veya kategori"
+          clearInput
+          (ionFocus)="onFocus()"
+        ></ion-input>
+        <ion-icon
+          *ngIf="!searchFocused"
+          name="search-outline"
+          slot="start"
+        ></ion-icon>
+        <ion-icon
+          (click)="closeSearch()"
+          *ngIf="searchFocused"
+          color="dark"
+          name="close-outline"
+          slot="start"
+        ></ion-icon>
+      </ion-item>
+    </div>
+    <!-- <div class="search">
       <ion-buttons slot="start" class="ion-no-margin">
         <ion-button *ngIf="!searchFocused" (click)="searchBar.setFocus()">
           <ion-icon
@@ -23,103 +46,103 @@
           (ionFocus)="onFocus()"
         ></ion-input>
       </ion-item>
-    </div>
+    </div> -->
   </ion-toolbar>
 </ion-header>
 
-<ion-content  *ngIf="!searchFocused" class="ion-no-padding" [@contentAnimation]>
-  <ion-grid>
+<ion-content *ngIf="!searchFocused" class="ion-no-padding" [@contentAnimation]>
+  <ion-grid >
     <ion-row>
-      <ion-col size-lg="6" offset-lg="3" class="ion-no-padding">
+      <ion-col size-lg="6" offset-lg="3" class="ion-padding">
         <app-image-carousel></app-image-carousel>
       </ion-col>
     </ion-row>
-    <div class="ion-padding">
-      <ion-row>
-        <ion-col size-lg="6" offset-lg="3">
-          <div class="title">
-            <h2>Kategoriler</h2>
-            <p routerLink="/home/categories">Tümünü Gör</p>
-          </div>
+    <!-- <div class="ion-padding"> -->
+    <ion-row>
+      <ion-col size-lg="6" offset-lg="3" class="ion-no-padding">
+        <div class="title category">
+          <h2>Kategoriler</h2>
+          <p routerLink="/home/categories">Tümünü Gör</p>
+        </div>
 
-          <div class="category-slider ion-padding-start">
-            <ion-slides [options]="sliderOptions">
-              <ion-slide *ngFor="let category of categories">
-                <ion-col>
-                  <h4>{{ category.name }}</h4>
-                  <img src="{{ category.image }}" />
-                </ion-col>
-              </ion-slide>
-            </ion-slides>
-          </div>
-        </ion-col>
-      </ion-row>
+        <div class="category-slider">
+          <ion-slides [options]="sliderOptions">
+            <ion-slide *ngFor="let category of categories">
+              <ion-col>
+                <h4>{{ category.name }}</h4>
+                <img src="{{ category.image }}" />
+              </ion-col>
+            </ion-slide>
+          </ion-slides>
+        </div>
+      </ion-col>
+    </ion-row>
 
-      <ion-row>
-        <ion-col size-lg="6" offset-lg="3">
-          <div class="title">
-            <h2>Öne Çıkanlar</h2>
-            <p routerLink="/home/products">Tümünü Gör</p>
-          </div>
+    <ion-row>
+      <ion-col size-lg="6" offset-lg="3" class="ion-no-padding">
+        <div class="title featured">
+          <h2>Öne Çıkanlar</h2>
+          <p routerLink="/home/products">Tümünü Gör</p>
+        </div>
 
-          <div class="product-slider">
-            <ion-slides
-              class="ion-no-padding"
-              [options]="sliderOptions"
-              *ngIf="products"
-            >
-              <ion-slide *ngFor="let product of products">
-                <ion-col
-                  class="ion-text-left"
-                  [routerLink]="['/product/' + product.id]"
-                  routerDirection="forward"
-                >
-                  <app-product-card [product]="product"></app-product-card>
-                </ion-col>
-              </ion-slide>
-            </ion-slides>
-
-            <ion-slides
-              class="ion-no-padding"
-              [options]="sliderOptions"
-              *ngIf="!products"
-            >
-              <ion-slide *ngFor="let product of [1,2,3,4,5]">
-                <ion-col class="ion-text-left">
-                  <app-product-card-skeleton></app-product-card-skeleton>
-                </ion-col>
-              </ion-slide>
-            </ion-slides>
-          </div>
-        </ion-col>
-      </ion-row>
-
-      <ion-row>
-        <ion-col size-lg="6" offset-lg="3">
-          <div class="title">
-            <h2>Markalar</h2>
-          </div>
-
-          <ion-slides mode="ios" [options]="sliderOptions" *ngIf="brands">
-            <ion-slide *ngFor="let item of brands" class="brand-slide">
-              <ion-avatar class="brand-image">
-                <ion-img src="../../assets/images/adidas.png"></ion-img>
-              </ion-avatar>
-              <span class="brand-name">Suerte Home</span>
+        <div class="product-slider">
+          <ion-slides
+            class="ion-padding-horizontal"
+            [options]="sliderOptions"
+            *ngIf="products"
+          >
+            <ion-slide *ngFor="let product of products">
+              <ion-col
+                class="ion-text-left ion-no-padding"
+                [routerLink]="['/product/' + product.id]"
+                routerDirection="forward"
+              >
+                <app-product-card [product]="product"></app-product-card>
+              </ion-col>
             </ion-slide>
           </ion-slides>
 
-          <ion-slides mode="ios" [options]="sliderOptions" *ngIf="!brands">
-            <ion-slide
-              *ngFor="let item of [1,2,3,4,5,6,7,1,2,3,4,5]"
-              class="brand-slide"
-            >
-              <app-brands-skeleton></app-brands-skeleton>
+          <ion-slides
+            class="ion-padding-horizontal"
+            [options]="sliderOptions"
+            *ngIf="!products"
+          >
+            <ion-slide *ngFor="let product of [1,2,3,4,5]">
+              <ion-col class="ion-text-left ion-no-padding">
+                <app-product-card-skeleton></app-product-card-skeleton>
+              </ion-col>
             </ion-slide>
           </ion-slides>
-        </ion-col>
-      </ion-row>
-    </div>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size-lg="6" offset-lg="3"  class="ion-padding">
+        <div class="title brands">
+          <h2>Markalar</h2>
+        </div>
+
+        <ion-slides mode="ios" [options]="sliderOptions" *ngIf="brands">
+          <ion-slide *ngFor="let item of brands" class="brand-slide">
+            <ion-avatar class="brand-image">
+              <ion-img src="../../assets/images/adidas.png"></ion-img>
+            </ion-avatar>
+            <span class="brand-name">Suerte Home</span>
+          </ion-slide>
+        </ion-slides>
+
+        <ion-slides mode="ios" [options]="sliderOptions" *ngIf="!brands">
+          <ion-slide
+            *ngFor="let item of [1,2,3,4,5,6,7,1,2,3,4,5]"
+            class="brand-slide"
+          >
+            <app-brands-skeleton></app-brands-skeleton>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+    <!-- </div> -->
   </ion-grid>
 </ion-content>
 

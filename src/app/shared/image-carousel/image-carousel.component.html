@@ -1,11 +1,12 @@
-<ion-slides
-  #slider
-  pager="true"
-  class="carousel"
-  [options]="slideOptions"
-  *ngIf="sliderImages"
->
-  <ion-slide *ngFor="let img of sliderImages">
+<ion-slides #slider pager="true" class="carousel" *ngIf="sliderImages">
+  <ion-slide *ngFor="let img of sliderImages" class="slide">
+    <div class="slide-info">
+      <div class="header">Halloween Offer</div>
+
+      <div class="text">20% off in All Products</div>
+
+      <button class="btn">Shop Now</button>
+    </div>
     <img class="ion-no-padding slider-image" [src]="img" />
   </ion-slide>
 </ion-slides>

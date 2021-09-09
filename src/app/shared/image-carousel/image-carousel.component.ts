@@ -13,7 +13,7 @@ export class ImageCarouselComponent implements OnInit {
     autoplay: {
       disableOnInteraction: false,
     },
-    speed: 300,
+    speed: 30000,
     loop: true,
   };
   sliderImages: any[];
@@ -25,7 +25,7 @@ export class ImageCarouselComponent implements OnInit {
     setTimeout(() => {
       this.sliderImages = [];
       for (let i of [1, 2, 3]) {
-        this.sliderImages.push('../../assets/images/discount-img.jpg');
+        this.sliderImages.push('../../assets/images/discount-img.png');
       }
     }, 2000)
   }

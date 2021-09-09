@@ -37,7 +37,7 @@ export class ProductService {
       shippingPrice: 0,
       store: { id: '1', storeName: 'Who TF Ltd.' },
       category: { id: '1', categoryName: 'Erkek' },
-      images: ['../../../assets/images/adidas.png'],
+      images: ['../../../assets/images/cart3.png'],
       isFavorite: false,
     },
 
@@ -49,7 +49,7 @@ export class ProductService {
       shippingPrice: 10,
       store: { id: '1', storeName: 'Who TF Ltd.' },
       category: { id: '1', categoryName: 'Erkek' },
-      images: ['../../../assets/like.png'],
+      images: ['../../../assets/images/cart3.png'],
       isFavorite: true,
     },
   ];

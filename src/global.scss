@@ -58,7 +58,8 @@
 }
 
 ion-content {
-  --ion-padding: 8px;
+  // --ion-padding: 8px;
+ 
 }
 
 app-search-results {
@@ -110,25 +111,70 @@ ion-toolbar {
 
 // Customizing Product Slider Bullets
 .carousel {
+  .slide {
+    position: relative;
+  }
+  .slide-info {
+    position: absolute;
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    left: 0;
+    height: 100%;
+
+    .header {
+      font-size: 12px;
+      color: #667eea;
+      margin-bottom: 8px;
+    }
+    .text {
+      font-size: 16px;
+      color: #434343;
+      margin-bottom: 16px;
+    }
+    .btn {
+      color: #ffffff;
+      background: linear-gradient(
+        90deg,
+        rgba(102, 126, 234, 1) 0%,
+        rgba(100, 182, 255, 1) 100%
+      );
+      height: 25px;
+      width: 70%;
+      border-radius: 2px;
+      margin-bottom: 8px;
+    }
+  }
+
   .swiper-pagination {
-    padding-left: 20px;
+    display: flex;
+    padding-left: 30px;
+    padding-bottom: 6px;
 
     .swiper-pagination-bullet {
-      background: #ffffff;
+      background: #bfbfbf;
       opacity: 1;
     }
 
     .swiper-pagination-bullet-active {
-      background: var(--ion-color-primary);
+      background: #374abe;
     }
+  }
+
+  img,
+  ion-skeleton-text {
+    width: 67%;
   }
 }
 
-@media screen and (max-width: 550px) {
-  .carousel .swiper-pagination {
-    text-align: left;
-  }
-}
+// @media screen and (max-width: 550px) {
+//   .carousel .swiper-pagination {
+//     text-align: left;
+//   }
+// }
 
 // Removing highlight when focused/clicked on product
 ion-slide:focus {
@@ -140,42 +186,70 @@ ion-col:focus {
 }
 
 // Search bar styles
+// .search {
+//   display: flex;
+//   .search-item {
+//     padding: 4px;
+//     width: 100%;
+
+//     .search-input {
+//       padding-left: 10px !important;
+//       border-left: 1px solid #f4f4f4;
+//     }
+
+//     .search-icon {
+//       cursor: pointer;
+//       transition: all 0.3s ease-in-out;
+//       margin-right: 16px;
+//       &.notClickable {
+//         pointer-events: none;
+//       }
+//     }
+//   }
+// }
+
+// .toolbar-divider {
+//   width: 1px;
+//   height: 38px;
+//   background-color: #f4f4f4;
+// }
+
+// .toolbar-filtering {
+//   ion-buttons {
+//     height: 56px;
+
+//     ion-button, ion-menu-button {
+//       height: 56px;
+//       flex: 1;
+//     }
+//   }
+// }
+
 .search {
-  display: flex;
-  .search-item {
-    padding: 4px;
-    width: 100%;
+  padding: 16px 16px 24px 16px;
+  color: #818181;
 
-    .search-input {
+  ion-item {
+    border-radius: 10px;
+    box-shadow: 0px 13px 30px 0px rgba(0, 0, 0, 0.09);
+    display: flex;
+    padding: 2px;
+
+    .search-seperator {
+      height: 24px;
+      width: 1px;
+      background-color: #70707023;
+    }
+
+    ion-icon {
+      color: #818181;
+      font-size: 23px;
+      // margin-right: 16px;
+    }
+
+    ion-input {
       padding-left: 10px !important;
-      border-left: 1px solid #f4f4f4;
-    }
-
-    .search-icon {
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-      margin-right: 16px;
-      &.notClickable {
-        pointer-events: none;
-      }
+      // border-left: 0.5px solid #818181;
     }
   }
 }
-
-.toolbar-divider {
-  width: 1px;
-  height: 38px;
-  background-color: #f4f4f4;
-}
-
-.toolbar-filtering {
-  ion-buttons {
-    height: 56px;
-
-    ion-button, ion-menu-button {
-      height: 56px;
-      flex: 1;
-    }
-  }
-}
-
