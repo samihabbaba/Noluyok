@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -7,6 +7,8 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./back-button.component.scss'],
 })
 export class BackButtonComponent implements OnInit {
+
+  @Input() margin: boolean;
 
   constructor(private navCtrl: NavController) { }
 

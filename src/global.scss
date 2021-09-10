@@ -61,8 +61,16 @@ ion-content {
   // --ion-padding: 8px;
 }
 
+ion-tabs {
+  padding-bottom: 50px;
+}
+
 app-search-results {
   height: 100%;
+}
+
+.tool-title {
+  color: #434343;
 }
 
 .main-button {

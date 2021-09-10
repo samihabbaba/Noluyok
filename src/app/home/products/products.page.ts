@@ -23,7 +23,7 @@ export class ProductsPage implements OnInit {
 
   ionViewWillLeave() {
     this.closeSearch();
-    this.header.el.classList.add('ion-no-border');
+    // this.header.el.classList.add('ion-no-border');
   }
 
   onFocus() {
