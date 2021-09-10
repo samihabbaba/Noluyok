@@ -1,14 +1,12 @@
 <ion-header mode="md" #header class="ion-no-border">
   <ion-toolbar #toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
-    </ion-buttons>
+    <app-back-button></app-back-button>
     <ion-buttons slot="end">
       <ion-button>
-        <ion-icon slot="icon-only" name="share-social-outline"></ion-icon>
+        <ion-icon color="medium" slot="icon-only" name="share-social-outline"></ion-icon>
       </ion-button>
       <ion-button>
-        <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
+        <ion-icon color="medium" slot="icon-only" name="heart-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -30,23 +28,23 @@
       </ion-col>
     </ion-row>
 
-    <div class="ion-padding-top">
-      <ion-row class="ion-padding ion-align-items-center">
-        <ion-col size="9" size-lg="4.5" offset-lg="3">
-          <h1 class="product-title">{{product.title}}</h1>
-        </ion-col>
-        <ion-col size="3" size-lg="1.5">
-          <div class="price-container">
-            <p class="price" [ngClass]="{discount: product.discountPrice}">
-              {{product.price}} TL
-            </p>
-            <p class="price" *ngIf="product.discountPrice">
-              {{product.discountPrice}} TL
-            </p>
-          </div>
-        </ion-col>
-      </ion-row>
-    </div>
+    <!-- <div class="ion-padding-top"> -->
+    <ion-row class="title-container ion-align-items-center">
+      <ion-col size="9" size-lg="4.5" offset-lg="3">
+        <h1 class="product-title">{{product.title}}</h1>
+      </ion-col>
+      <ion-col size="3" size-lg="1.5">
+        <div class="price-container">
+          <p class="price" [ngClass]="{discount: product.discountPrice}">
+            {{product.price}} TL
+          </p>
+          <p class="price" *ngIf="product.discountPrice">
+            {{product.discountPrice}} TL
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <!-- </div> -->
 
     <app-seperator></app-seperator>
 
@@ -74,17 +72,18 @@
 
     <app-seperator></app-seperator>
 
-    <ion-row class="ion-padding ion-align-items-center">
+    <ion-row class="hor-padding ion-align-items-center">
       <ion-col size-lg="6" offset-lg="3">
         <div class="store-name">
           Satıcı: <a> {{product.store.storeName}}</a>
-          <ion-icon name="checkbox" color="success"></ion-icon>
-          <ion-badge color="tertiary" mode="md"
+          <ion-icon name="checkbox"></ion-icon>
+          <ion-badge color="primary" mode="md"
             >{{product.store.storeRating}}</ion-badge
           >
         </div>
         <div class="shipping-time">
-          <ion-icon name="car"></ion-icon> Tahmini Kargoya Teslim:
+          <ion-icon name="car-sport-outline" color="primary"></ion-icon> Tahmini Kargoya
+          Teslim:
           <b>{{product.store.estShipping}} gün içinde</b>
         </div>
       </ion-col>
@@ -92,7 +91,7 @@
 
     <app-seperator></app-seperator>
 
-    <ion-row class="ion-padding ion-align-items-center">
+    <ion-row class="hor-padding ion-align-items-center">
       <ion-col size-lg="6" offset-lg="3">
         <div class="seller-offers">
           <h5>Satıcı Kampanyaları</h5>
@@ -111,7 +110,7 @@
 
     <app-seperator></app-seperator>
 
-    <ion-row class="ion-padding ion-align-items-center">
+    <ion-row class="hor-padding ion-align-items-center">
       <ion-col size-lg="6" offset-lg="3">
         <div class="description">
           <h5>Ürün Bilgileri</h5>
@@ -145,7 +144,7 @@
     <app-seperator></app-seperator>
 
     <ion-row
-      class="ion-padding ion-align-items-center"
+      class="hor-padding ion-align-items-center"
       style="padding-bottom: 0"
     >
       <ion-col size-lg="6" offset-lg="3">
@@ -183,7 +182,7 @@
 
     <app-seperator></app-seperator>
 
-    <ion-row class="ion-padding ion-align-items-center">
+    <ion-row class="hor-padding ion-align-items-center">
       <ion-col size-lg="6" offset-lg="3">
         <h5 class="slider-title">Benzer Ürünler</h5>
         <div class="product-slider">
@@ -224,10 +223,10 @@
 <ion-footer mode="ios">
   <ion-row>
     <ion-col size="6">
-      <ion-button expand="full" color="light">Sepete Ekle</ion-button>
+      <ion-button expand="full" class="add-to-cart-btn">Sepete Ekle</ion-button>
     </ion-col>
     <ion-col size="6">
-      <ion-button expand="full" color="tertiary">Satın Al</ion-button>
+      <ion-button expand="full">Satın Al</ion-button>
     </ion-col>
   </ion-row>
 </ion-footer>
