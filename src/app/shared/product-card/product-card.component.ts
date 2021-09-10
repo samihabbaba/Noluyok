@@ -8,6 +8,7 @@ import { Product } from 'src/app/models/product';
 })
 export class ProductCardComponent implements OnInit {
   @Input() product: Product;
+  @Input() large: boolean;
 
   constructor() {}
 

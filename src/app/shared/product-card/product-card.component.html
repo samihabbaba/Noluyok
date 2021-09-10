@@ -29,7 +29,7 @@
   name="heart"
 ></ion-icon> -->
 
-<img src="{{ product.images[0] }}" />
+<img src="{{ product.images[0] }}" [ngClass]="{bigImg: large, smImg: !large}" />
 
 <div class="prices-container">
   <p class="price" [ngClass]="{discounted: product.discountPrice}">{{ product.price }} TL</p>

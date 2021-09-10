@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonInput, MenuController } from '@ionic/angular';
+import { IonInput, MenuController, PickerController } from '@ionic/angular';
 import { ContentAnimation } from 'src/app/animations/search-animation';
 import { SearchBarService } from 'src/app/services/search-bar/search-bar.service';
 
@@ -12,18 +12,25 @@ import { SearchBarService } from 'src/app/services/search-bar/search-bar.service
 export class ProductsPage implements OnInit {
   searchFocused: boolean = false;
   @ViewChild('searchBar') searchBar: IonInput;
-  @ViewChild('header') header: any;
+  sortOptions = [
+    { text: 'Önerilen', value: 0, selectedIndex: 0 },
+    { text: 'En Düşük Fiyat', value: 0, selectedIndex: 1 },
+    { text: 'En Yüksek Fiyat', value: 0, selectedIndex: 2 },
+    { text: 'Çok Satanlar', value: 0, selectedIndex: 3 },
+    { text: 'En Favoriler', value: 0, selectedIndex: 4 },
+    { text: 'En Yeniler', value: 0, selectedIndex: 5 },
+  ];
 
   constructor(
     private searchService: SearchBarService,
-    private menuController: MenuController
+    private menuCtrl: MenuController,
+    private pickerCtrl: PickerController
   ) {}
 
   ngOnInit() {}
 
   ionViewWillLeave() {
     this.closeSearch();
-    // this.header.el.classList.add('ion-no-border');
   }
 
   onFocus() {
@@ -36,6 +43,32 @@ export class ProductsPage implements OnInit {
   }
 
   toggleFilterMenu() {
-    this.menuController.toggle('filter');
+    this.menuCtrl.toggle('filter');
+  }
+
+  async openSortPicker() {
+    const picker = await this.pickerCtrl.create({
+      buttons: [
+        {
+          text: 'Kapat',
+          role: 'cancel',
+        },
+        {
+          text: 'Seç',
+          handler: (value) => {
+            console.log(value.sorting);
+          },
+        },
+      ],
+      columns: [{ name: 'sorting', options: this.sortOptions }],
+    });
+
+    picker.columns[0].options.forEach((element) => {
+      delete element.selected;
+      delete element.duration;
+      delete element.transform;
+    });
+
+    picker.present();
   }
 }

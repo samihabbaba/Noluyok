@@ -7,15 +7,17 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./back-button.component.scss'],
 })
 export class BackButtonComponent implements OnInit {
-
   @Input() margin: boolean;
 
-  constructor(private navCtrl: NavController) { }
+  constructor(private navCtrl: NavController) {}
 
   ngOnInit() {}
 
-
   goBack() {
-    this.navCtrl.back()
+    if (history.state.navigationId === 1) {
+      this.navCtrl.navigateBack('/home');
+    } else {
+      this.navCtrl.pop();
+    }
   }
 }

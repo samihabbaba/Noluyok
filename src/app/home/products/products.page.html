@@ -1,10 +1,10 @@
 <div class="ion-page" id="main-content">
-  <ion-header mode="ios" #header class="ion-no-padding">
-    <ion-toolbar  class="ion-no-padding">
+  <ion-header mode="ios" class="ion-no-padding">
+    <ion-toolbar class="ion-no-padding">
       <app-back-button [margin]="true"></app-back-button>
 
       <ion-buttons slot="end" class="filtering-buttons">
-        <ion-button color="medium">
+        <ion-button color="medium" (click)="openSortPicker()">
           <ion-icon slot="icon-only" name="options-outline"></ion-icon>
         </ion-button>
 
@@ -49,7 +49,7 @@
     </ion-toolbar>
 
     <ion-toolbar class="ion-no-padding">
-      <div class="search" style="padding-top: 4px;">
+      <div class="search" style="padding-top: 4px">
         <ion-item lines="none">
           <div class="search-seperator"></div>
           <ion-input
