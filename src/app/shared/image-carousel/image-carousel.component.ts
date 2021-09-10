@@ -13,7 +13,7 @@ export class ImageCarouselComponent implements OnInit {
     autoplay: {
       disableOnInteraction: false,
     },
-    speed: 30000,
+    speed: 1000,
     loop: true,
   };
   sliderImages: any[];

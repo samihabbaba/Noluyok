@@ -1,4 +1,4 @@
-<ion-slides #slider pager="true" class="carousel" *ngIf="sliderImages">
+<ion-slides #slider [options]="slideOptions" pager="true" class="carousel" *ngIf="sliderImages">
   <ion-slide *ngFor="let img of sliderImages" class="slide">
     <div class="slide-info">
       <div class="header">Halloween Offer</div>

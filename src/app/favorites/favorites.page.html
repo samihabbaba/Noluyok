@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-grid class="ion-no-padding">
+  <ion-grid class="ion-no-padding" style="padding-bottom: 50px;">
     <ion-row class="ion-no-padding">
       <ion-col
         size="6"
@@ -13,7 +13,7 @@
         size-md="3"
         size-lg="2"
         size-xl="1.5"
-        class="ion-no-padding"
+        class="ion-no-padding ion-text-left"
         *ngFor="let product of products"
         [routerLink]="['/product/' + product.id]"
         routerDirection="forward"

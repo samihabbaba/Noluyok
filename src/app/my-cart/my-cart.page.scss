@@ -39,17 +39,20 @@
         .prices {
           display: flex;
           p:nth-child(1) {
-            color: var(--ion-color-primary);
+            color: #374abe;
+            font-weight: 500;
           }
 
           .discount {
             text-decoration: line-through;
             color: #434343 !important;
+            font-weight: 500;
           }
 
           p:nth-child(2) {
-            color: var(--ion-color-primary);
+            color: #374abe;
             margin-left: 1rem;
+            font-weight: 500;
           }
         }
 
@@ -79,10 +82,11 @@
 }
 
 .remove {
-  font-size: 19px;
+  font-size: 21px;
   position: absolute;
   top: 12px;
   right: 12px;
+  color: #979797;
 }
 
 ion-footer {
