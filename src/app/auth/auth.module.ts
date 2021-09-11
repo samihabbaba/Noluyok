@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { AuthPageRoutingModule } from './auth-routing.module';
 
 import { AuthPage } from './auth.page';
-import { BecomeSellerModalComponent } from './become-seller-modal/become-seller-modal.component';
 
 @NgModule({
   imports: [
@@ -16,6 +15,6 @@ import { BecomeSellerModalComponent } from './become-seller-modal/become-seller-
     IonicModule,
     AuthPageRoutingModule
   ],
-  declarations: [AuthPage, BecomeSellerModalComponent]
+  declarations: [AuthPage]
 })
 export class AuthPageModule {}

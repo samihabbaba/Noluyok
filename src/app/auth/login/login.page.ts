@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -8,14 +7,9 @@ import { NavController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private navCtrl: NavController) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
-
-  login() {
-    // Enabling Side Menu
-    this.navCtrl.navigateRoot('/home', { animationDirection: 'forward' });
-  }
 }

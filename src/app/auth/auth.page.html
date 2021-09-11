@@ -1,43 +1,9 @@
-<ion-header mode="md">
+<ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button routerLink="/home" routerDirection="back" >
-        <img src="../../assets/back.svg">
-      </ion-button>
-    </ion-buttons>
-
-    <ion-text slot="end" (click)="displayBecomeSellerModal()">
-      <p class="toolbar-text">Satıcı mı olmak istiyorsun?</p>
-    </ion-text>
+    <ion-title>auth</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding ion-text-center">
-  <div class="container">
-    <div class="page-header">
-      <h1>Kıbrıs'ın En Büyük</h1>
-      <h3>Mağazasına Hoşgeldin</h3>
-    </div>
+<ion-content>
 
-    <img src="../../assets/welcome.png" />
-
-    <div class="button-container">
-      <ion-button
-        expand="block"
-        class="main-button"
-        routerLink="/auth/login"
-        routerDirection="forward"
-        >Giriş Yap</ion-button
-      >
-      <ion-button
-        expand="block"
-        class="signup-btn"
-        color="dark"
-        fill="clear"
-        routerLink="/auth/signup"
-        routerDirection="forward"
-        >Hesap Oluştur</ion-button
-      >
-    </div>
-  </div>
 </ion-content>

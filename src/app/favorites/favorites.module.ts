@@ -8,7 +8,6 @@ import { FavoritesPageRoutingModule } from './favorites-routing.module';
 
 import { FavoritesPage } from './favorites.page';
 import { HomePageModule } from '../home/home.module';
-import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -16,8 +15,7 @@ import { SharedModule } from '../shared/shared.module';
     FormsModule,
     IonicModule,
     FavoritesPageRoutingModule,
-    SharedModule
-
+    HomePageModule
   ],
   declarations: [FavoritesPage]
 })

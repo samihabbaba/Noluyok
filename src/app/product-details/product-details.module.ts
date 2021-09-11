@@ -7,19 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { ProductDetailsPageRoutingModule } from './product-details-routing.module';
 
 import { ProductDetailsPage } from './product-details.page';
-import { HideHeaderDirective } from '../directives/hide-header/hide-header.directive';
-import { FadeHeaderDirective } from '../directives/fade-header/fade-header.directive';
-import { SeperatorComponent } from './seperator/seperator.component';
-import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ProductDetailsPageRoutingModule,
-    SharedModule
+    ProductDetailsPageRoutingModule
   ],
-  declarations: [ProductDetailsPage, HideHeaderDirective, FadeHeaderDirective, SeperatorComponent]
+  declarations: [ProductDetailsPage]
 })
-export class ProductDetailsPageModule { }
+export class ProductDetailsPageModule {}

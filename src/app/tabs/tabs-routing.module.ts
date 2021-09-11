@@ -32,10 +32,6 @@ const routes: Routes = [
         canLoad: [AuthGuard],
       },
       {
-        path: 'store',
-        loadChildren: () => import('../store/store.module').then( m => m.StorePageModule)
-      },
-      {
         path: '',
         redirectTo: '/home',
         pathMatch: 'full',

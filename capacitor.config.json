@@ -1,6 +1,6 @@
 {
-  "appId": "com.noluyok",
-  "appName": "Noluyok",
-  "webDir": "www",
-  "bundledWebRuntime": false
+	"appId": "com.noluyok",
+	"appName": "Noluyok",
+	"webDir": "www",
+	"bundledWebRuntime": false
 }

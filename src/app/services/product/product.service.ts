@@ -5,7 +5,7 @@ import { Product } from 'src/app/models/product';
   providedIn: 'root',
 })
 export class ProductService {
-  products: any[] = [
+  products: Product[] = [
     {
       id: '1',
       title: 'Adidas SweatShirt',
@@ -37,7 +37,7 @@ export class ProductService {
       shippingPrice: 0,
       store: { id: '1', storeName: 'Who TF Ltd.' },
       category: { id: '1', categoryName: 'Erkek' },
-      images: ['../../../assets/images/cart3.png'],
+      images: ['../../../assets/images/adidas.png'],
       isFavorite: false,
     },
 
@@ -49,7 +49,7 @@ export class ProductService {
       shippingPrice: 10,
       store: { id: '1', storeName: 'Who TF Ltd.' },
       category: { id: '1', categoryName: 'Erkek' },
-      images: ['../../../assets/images/cart3.png'],
+      images: ['../../../assets/like.png'],
       isFavorite: true,
     },
   ];

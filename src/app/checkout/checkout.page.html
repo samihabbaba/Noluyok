@@ -17,37 +17,23 @@
           </ion-list-header>
 
           <ion-item class="ion-no-padding" mode="md">
-            <ion-label>Kart Sahibi</ion-label>
+            <ion-label>Kart sahibi</ion-label>
             <ion-input placeholder="Adı ve Soyadı"></ion-input>
-            <ion-icon name="id-card-outline" slot="end"></ion-icon>
           </ion-item>
 
           <ion-item class="ion-no-padding" mode="md">
-            <ion-label>Kart Numarası</ion-label>
-            <ion-input inputmode="numeric" maxlength="16"></ion-input>
-            <ion-icon name="card-outline" slot="end"></ion-icon>
+            <ion-label>Kart numarası</ion-label>
+            <ion-input placeholder="16 Haneli Kart Numarası"></ion-input>
           </ion-item>
 
           <ion-item class="ion-no-padding" mode="md">
             <ion-label>Gerçerlilik Tarihi</ion-label>
-
-            <ion-datetime
-              display-format="MM/YY"
-              min="2021"
-              max="2080"
-            ></ion-datetime>
-
-            <ion-icon name="calendar-outline" slot="end"></ion-icon>
+            <ion-input placeholder="MM / DD"></ion-input>
           </ion-item>
 
           <ion-item class="ion-no-padding" mode="md">
             <ion-label>CVV</ion-label>
-            <ion-input
-              placeholder="3 Haneli Güvenlik Kodu"
-              inputmode="numeric"
-              maxlength="3"
-            ></ion-input>
-            <ion-icon name="lock-closed-outline" slot="end"></ion-icon>
+            <ion-input placeholder="3 Haneli Güvenlik Kodu"></ion-input>
           </ion-item>
         </ion-list>
       </ion-col>
@@ -63,25 +49,21 @@
           <ion-item class="ion-no-padding" mode="md">
             <ion-label>Adres Başlığı</ion-label>
             <ion-input placeholder="Örnek: İş - Ev"></ion-input>
-            <ion-icon name="compass-outline" slot="end"></ion-icon>
           </ion-item>
 
           <ion-item class="ion-no-padding" mode="md">
             <ion-label>Şehir</ion-label>
             <ion-input placeholder="Örnek: Mağusa - Lefkoşa"></ion-input>
-            <ion-icon name="navigate-outline" slot="end"></ion-icon>
           </ion-item>
 
           <ion-item class="ion-no-padding" mode="md">
             <ion-label>Bölge</ion-label>
             <ion-input placeholder="Köy veya Bölge Adı"></ion-input>
-            <ion-icon name="locate-outline" slot="end"></ion-icon>
           </ion-item>
 
           <ion-item class="ion-no-padding" mode="md">
             <ion-label>Sokak</ion-label>
             <ion-input placeholder="Sokak adı"></ion-input>
-            <ion-icon name="navigate-circle-outline" slot="end"></ion-icon>
           </ion-item>
 
           <ion-item class="ion-no-padding" mode="md">
@@ -89,7 +71,6 @@
             <ion-textarea
               placeholder="Örnek: Işıkları geçince X marketten sola, Z apartmanı daire 5."
             ></ion-textarea>
-            <ion-icon name="pin-outline" slot="end"></ion-icon>
           </ion-item>
         </ion-list>
       </ion-col>

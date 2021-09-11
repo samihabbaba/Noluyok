@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
-import { BecomeSellerModalComponent } from './become-seller-modal/become-seller-modal.component';
 
 @Component({
   selector: 'app-auth',
@@ -9,14 +7,9 @@ import { BecomeSellerModalComponent } from './become-seller-modal/become-seller-
 })
 export class AuthPage implements OnInit {
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-
-  displayBecomeSellerModal() {
-    this.modalCtrl.create({ component: BecomeSellerModalComponent }).then(modalEl => { modalEl.present() })
   }
 
 }
