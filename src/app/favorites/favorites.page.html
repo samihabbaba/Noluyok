@@ -1,11 +1,11 @@
 <ion-header mode="md">
   <ion-toolbar>
-    <ion-title>Favorilerim</ion-title>
+    <ion-title class="tool-title">Favorilerim</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-grid class="ion-no-padding">
+<ion-content class="ion-padding">
+  <ion-grid class="ion-no-padding" style="padding-bottom: 50px;">
     <ion-row class="ion-no-padding">
       <ion-col
         size="6"
@@ -13,13 +13,13 @@
         size-md="3"
         size-lg="2"
         size-xl="1.5"
-        class="ion-no-padding"
+        class="ion-no-padding ion-text-left"
         *ngFor="let product of products"
         [routerLink]="['/product/' + product.id]"
         routerDirection="forward"
       >
         <div class="card-container">
-          <app-product-card [product]="product"></app-product-card>
+          <app-product-card [product]="product" [large]="true"></app-product-card>
         </div>
       </ion-col>
     </ion-row>

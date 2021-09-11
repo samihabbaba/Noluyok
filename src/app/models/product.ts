@@ -2,20 +2,22 @@ import { Category } from './cateogory';
 import { Store } from './store';
 
 export interface Product {
-  id: string;
-  title: string;
+  id: string | null
+  title: string | null;
   description?: string | null;
   category: Category | any;
   colors?: Color[] | null;
+  availableColors: string[] | null;
   sizes?: Size[] | null;
   images?: any[] | null;
   views?: number | null;
   stock?: number | null;
   store: Store | any;
-  price: number;
+  price: number | null;
   discountPrice: number | null;
   shippingPrice: number | null;
-  isFavorite?: boolean | null
+  isFavorite?: boolean | null;
+  tags: any[] | null;
 }
 
 export interface Color {

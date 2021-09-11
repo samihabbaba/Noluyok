@@ -1,9 +1,110 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>products</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="ion-page" id="main-content">
+  <ion-header mode="ios" class="ion-no-padding">
+    <ion-toolbar class="ion-no-padding">
+      <app-back-button [margin]="true"></app-back-button>
 
-<ion-content>
+      <ion-buttons slot="end" class="filtering-buttons">
+        <ion-button color="medium" (click)="openSortPicker()">
+          <ion-icon slot="icon-only" name="options-outline"></ion-icon>
+        </ion-button>
 
-</ion-content>
+        <ion-button (click)="toggleFilterMenu()" color="medium">
+          <ion-icon slot="icon-only" name="funnel-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <!-- <ion-button slot="end" color="primary">
+        <ion-icon slot="icon-only" name="reorder-three-outline"></ion-icon>
+      </ion-button>
+
+
+
+      <ion-button (click)="toggleFilterMenu()" color="primary" slot="end">
+        <ion-icon slot="icon-only" name="funnel-outline"></ion-icon>
+      </ion-button> -->
+
+      <!-- <ion-icon slot="end" name="reorder-three-outline" color="dark" ></ion-icon>
+
+      <ion-icon slot="end" name="funnel-outline" color="dark" (click)="toggleFilterMenu()"></ion-icon> -->
+
+      <!--
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon
+            slot="end"
+            color="primary"
+            name="reorder-three-outline"
+          ></ion-icon>
+          Sırala
+        </ion-button>
+        <div class="toolbar-divider"></div>
+        <ion-button (click)="toggleFilterMenu()">
+          <ion-icon
+            slot="start"
+            color="primary"
+            name="funnel-outline"
+          ></ion-icon>
+          Filtrele
+        </ion-button>
+      </ion-buttons> -->
+    </ion-toolbar>
+
+    <ion-toolbar class="ion-no-padding">
+      <div class="search" style="padding-top: 4px">
+        <ion-item lines="none">
+          <div class="search-seperator"></div>
+          <ion-input
+            #searchBar
+            placeholder="Marka, ürün veya kategori"
+            clearInput
+            (ionFocus)="onFocus()"
+          ></ion-input>
+          <ion-icon
+            *ngIf="!searchFocused"
+            name="search-outline"
+            slot="start"
+          ></ion-icon>
+          <ion-icon
+            (click)="closeSearch()"
+            *ngIf="searchFocused"
+            color="dark"
+            name="close-outline"
+            slot="start"
+          ></ion-icon>
+        </ion-item>
+      </div>
+    </ion-toolbar>
+
+    <!-- <ion-toolbar *ngIf="!searchFocused" class="toolbar-filtering">
+      <ion-buttons>
+        <ion-button>
+          <ion-icon
+            slot="end"
+            color="primary"
+            name="reorder-three-outline"
+          ></ion-icon>
+          Sırala
+        </ion-button>
+        <div class="toolbar-divider"></div>
+        <ion-button (click)="toggleFilterMenu()">
+          <ion-icon
+            slot="start"
+            color="primary"
+            name="funnel-outline"
+          ></ion-icon>
+          Filtrele
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar> -->
+  </ion-header>
+
+  <ion-content *ngIf="!searchFocused" class="ion-padding" [@contentAnimation]>
+    Fucks
+  </ion-content>
+
+  <app-search-results
+    *ngIf="searchFocused"
+    [@contentAnimation]
+  ></app-search-results>
+</div>
+
+<app-filters-menu></app-filters-menu>

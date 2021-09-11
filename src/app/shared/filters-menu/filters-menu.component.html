@@ -1,0 +1,56 @@
+<ion-menu side="end" menuId="filter" content-id="main-content" >
+  <ion-header mode="md">
+    <ion-toolbar translucent>
+      <ion-buttons slot="start">
+        <ion-button color="medium" (click)="toggleMenu()">
+          <ion-icon slot="icon-only" name="close"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Filtrele</ion-title>
+
+      <ion-buttons slot="end">
+        <ion-button (click)="resetFilters()" color="primary" [disabled]="true">
+          Temizle
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list class="filters-list">
+      <ion-item detail="true" lines="none">
+        <ion-label color="dark">Kategori</ion-label>
+      </ion-item>
+      <ion-item lines="none" detail="true">
+        <ion-label color="dark">Marka</ion-label>
+      </ion-item>
+      <ion-item lines="none" detail="true">
+        <ion-label color="dark">Cinsiyet</ion-label>
+      </ion-item>
+      <ion-item lines="none" detail="true">
+        <ion-label color="dark">Fiyat</ion-label>
+      </ion-item>
+
+      <ion-item lines="none" detail="true">
+        <ion-label color="dark">Renk</ion-label>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label color="dark">İndirimli Ürünler</ion-label>
+        <ion-toggle slot="end" color="secondary"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label color="dark">Kargo Bedava</ion-label>
+        <ion-toggle slot="end" color="secondary"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+  <ion-footer translucent="true" mode="ios">
+    <ion-toolbar color="translucent">
+      <ion-button expand="block" class="main-button" (click)="applyFilters()"
+        >Ürünleri Listele</ion-button
+      >
+    </ion-toolbar>
+  </ion-footer>
+</ion-menu>

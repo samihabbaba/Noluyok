@@ -1,0 +1,57 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/profile"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-no-padding">Adres Bilgilerim</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size-lg="6" offset-lg="3">
+        <ion-item class="ion-no-padding" mode="md">
+          <ion-label>Adres Başlığı</ion-label>
+          <ion-input placeholder="Örnek: İş - Ev"></ion-input>
+          <ion-icon name="compass-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item class="ion-no-padding" mode="md">
+          <ion-label>Şehir</ion-label>
+          <ion-input placeholder="Örnek: Mağusa - Lefkoşa"></ion-input>
+          <ion-icon name="navigate-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item class="ion-no-padding" mode="md">
+          <ion-label>Bölge</ion-label>
+          <ion-input placeholder="Köy veya Bölge Adı"></ion-input>
+          <ion-icon name="locate-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item class="ion-no-padding" mode="md">
+          <ion-label>Sokak</ion-label>
+          <ion-input placeholder="Sokak adı"></ion-input>
+          <ion-icon name="navigate-circle-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item class="ion-no-padding" mode="md">
+          <ion-label>Adres Tarifi</ion-label>
+          <ion-textarea
+            placeholder="Örnek: Işıkları geçince X marketten sola, Z apartmanı daire 5."
+          ></ion-textarea>
+          <ion-icon name="pin-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-button
+          expand="block"
+          class="main-button ion-margin-top"
+          routerLink="/profile"
+          routerDirection="back"
+        >
+          Kaydet</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

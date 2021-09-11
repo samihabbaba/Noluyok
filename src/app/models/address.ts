@@ -1,7 +1,7 @@
 export interface Address {
-  addressHeader: string;
-  city: string;
-  area: string;
-  street: string;
-  detailedDescription: string;
+  addressHeader: string | null;
+  city: string | null;
+  area: string | null;
+  street: string | null;
+  detailedDescription: string | null;
 }

@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { SearchBarComponent } from './search-bar.component';
+import { OpenStorePage } from './open-store.page';
 
-describe('SearchBarComponent', () => {
-  let component: SearchBarComponent;
-  let fixture: ComponentFixture<SearchBarComponent>;
+describe('OpenStorePage', () => {
+  let component: OpenStorePage;
+  let fixture: ComponentFixture<OpenStorePage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ SearchBarComponent ],
+      declarations: [ OpenStorePage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(SearchBarComponent);
+    fixture = TestBed.createComponent(OpenStorePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

@@ -13,12 +13,20 @@ export class ImageCarouselComponent implements OnInit {
     autoplay: {
       disableOnInteraction: false,
     },
-    speed: 300,
+    speed: 1000,
     loop: true,
   };
+  sliderImages: any[];
   @ViewChild('slider') slider: IonSlides;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    setTimeout(() => {
+      this.sliderImages = [];
+      for (let i of [1, 2, 3]) {
+        this.sliderImages.push('../../assets/images/discount-img.png');
+      }
+    }, 2000)
+  }
 }

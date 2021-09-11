@@ -1,4 +1,5 @@
-<img src="{{ product.images[0] }}" />
+<!-- <img src="{{ product.images[0] }}" />
+
 <div class="card-content">
   <span class="product-text">
     <b>{{ product.store.storeName }}</b>
@@ -18,6 +19,34 @@
   *ngIf="!product.isFavorite"
   class="like-icon"
   name="heart-outline"
+  (click)="addToFavorite(product, $event)"
+></ion-icon>
+<ion-icon
+  *ngIf="product.isFavorite"
+  color="primary"
+  (click)="addToFavorite(product, $event)"
+  class="like-icon"
+  name="heart"
+></ion-icon> -->
+
+<img src="{{ product.images[0] }}" [ngClass]="{bigImg: large, smImg: !large}" />
+
+<div class="prices-container">
+  <p class="price" [ngClass]="{discounted: product.discountPrice}">{{ product.price }} TL</p>
+  <p class="discount" *ngIf="product.discountPrice">
+    {{ product.discountPrice }} TL
+  </p>
+</div>
+<!-- <p>{{product.store.storeName}}</p> -->
+<h6>{{ product.title }}</h6>
+
+
+
+<ion-icon
+  *ngIf="!product.isFavorite"
+  class="like-icon"
+  name="heart-outline"
+  color="light"
   (click)="addToFavorite(product, $event)"
 ></ion-icon>
 <ion-icon

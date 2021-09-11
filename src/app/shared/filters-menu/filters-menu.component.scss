@@ -1,0 +1,26 @@
+ion-footer {
+  // padding-left: 20px;
+  // padding-right: 20px;
+
+  .main-button::after {
+    box-shadow: none !important;
+  }
+}
+
+// ion-menu {
+//   margin-bottom: 50px;
+// }
+
+ion-title {
+  color: #434343;
+}
+
+ion-footer {
+  overflow: hidden;
+}
+
+.filters-list {
+  ion-item {
+    border-bottom: 1px solid #f4f4f4;
+  }
+}

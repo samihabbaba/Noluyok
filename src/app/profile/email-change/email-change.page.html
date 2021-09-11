@@ -1,0 +1,41 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/profile"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-no-padding">E-Posta Değişikliği</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size-lg="6" offset-lg="3">
+        <ion-item class="ion-no-padding" mode="md">
+          <ion-label>Eski E-Posta</ion-label>
+          <ion-input inputmode="email"></ion-input>
+          <ion-icon name="mail-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item class="ion-no-padding" mode="md">
+          <ion-label>Yeni E-posta</ion-label>
+          <ion-input inputmode="email"></ion-input>
+          <ion-icon name="mail-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-button
+          expand="block"
+          class="main-button ion-margin-top"
+          routerLink="/profile"
+          routerDirection="back"
+        >
+          Kaydet</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
