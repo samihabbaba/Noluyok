@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { AddressInfoPageRoutingModule } from './address-info-routing.module';
 
 import { AddressInfoPage } from './address-info.page';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AddressInfoPageRoutingModule
+    AddressInfoPageRoutingModule,
+    SharedModule,
   ],
-  declarations: [AddressInfoPage]
+  declarations: [AddressInfoPage],
 })
 export class AddressInfoPageModule {}

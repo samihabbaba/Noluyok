@@ -1,30 +1,29 @@
 <ion-header mode="md">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/profile"></ion-back-button>
-    </ion-buttons>
-    <ion-title class="ion-no-padding">Kayıtlı Kartlarım</ion-title>
+    <app-back-button [defaultUrl]="'/profile'"></app-back-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
+  <h1 class="header">Kayıtlı Kartlarım</h1>
+
   <ion-grid class="ion-no-padding">
     <ion-row>
       <ion-col size-lg="6" offset-lg="3">
         <ion-item class="ion-no-padding" mode="md">
-          <ion-label>Kart Sahibi</ion-label>
+          <ion-label position="floating">Kart Sahibi</ion-label>
           <ion-input placeholder="Adı ve Soyadı"></ion-input>
           <ion-icon name="id-card-outline" slot="end"></ion-icon>
         </ion-item>
 
         <ion-item class="ion-no-padding" mode="md">
-          <ion-label>Kart Numarası</ion-label>
+          <ion-label position="floating">Kart Numarası</ion-label>
           <ion-input inputmode="numeric" maxlength="16"></ion-input>
           <ion-icon name="card-outline" slot="end"></ion-icon>
         </ion-item>
 
         <ion-item class="ion-no-padding" mode="md">
-          <ion-label>Gerçerlilik Tarihi</ion-label>
+          <ion-label position="floating">Gerçerlilik Tarihi</ion-label>
 
           <ion-datetime
             display-format="MM/YY"
@@ -36,7 +35,7 @@
         </ion-item>
 
         <ion-item class="ion-no-padding" mode="md">
-          <ion-label>CVV</ion-label>
+          <ion-label position="floating">CVV</ion-label>
           <ion-input
             placeholder="3 Haneli Güvenlik Kodu"
             inputmode="numeric"
@@ -44,16 +43,18 @@
           ></ion-input>
           <ion-icon name="lock-closed-outline" slot="end"></ion-icon>
         </ion-item>
-
-        <ion-button
-          expand="block"
-          class="main-button ion-margin-top"
-          routerLink="/profile"
-          routerDirection="back"
-        >
-          Kaydet</ion-button
-        >
       </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
+
+<ion-footer translucent="true" class="ion-no-border" mode="md">
+  <ion-button
+    expand="block"
+    class="main-button"
+    routerLink="/profile"
+    routerDirection="back"
+  >
+    Kaydet</ion-button
+  >
+</ion-footer>

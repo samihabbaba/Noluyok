@@ -8,6 +8,7 @@ import { NavController } from '@ionic/angular';
 })
 export class BackButtonComponent implements OnInit {
   @Input() margin: boolean;
+  @Input() defaultUrl: string;
 
   constructor(private navCtrl: NavController) {}
 
@@ -15,7 +16,7 @@ export class BackButtonComponent implements OnInit {
 
   goBack() {
     if (history.state.navigationId === 1) {
-      this.navCtrl.navigateBack('/home');
+      this.navCtrl.navigateBack(this.defaultUrl);
     } else {
       this.navCtrl.pop();
     }
