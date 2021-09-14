@@ -4,16 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MyOrdersPageRoutingModule } from './my-orders-routing.module';
-
 import { MyOrdersPage } from './my-orders.page';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { MyOrdersPageRoutingModule } from './my-orders-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MyOrdersPageRoutingModule
+    MyOrdersPageRoutingModule,
+    SharedModule
   ],
   declarations: [MyOrdersPage]
 })

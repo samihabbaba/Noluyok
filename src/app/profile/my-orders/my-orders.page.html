@@ -1,10 +1,43 @@
 <ion-header mode="md">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/profile"></ion-back-button>
-    </ion-buttons>
-    <ion-title class="ion-no-padding">Siparişlerim</ion-title>
+    <app-back-button [defaultUrl]="'profile'"></app-back-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding"> </ion-content>
+<ion-content class="ion-padding">
+  <h1 class="header">Siparişlerim</h1>
+
+  <div class="cart-items">
+    <ion-card mode="ios" *ngFor="let item of cart">
+      <ion-card-content>
+        <div class="item-img">
+          <img src="../../assets/images/cart3.png" />
+        </div>
+
+        <div class="item-info">
+          <p>{{item.product.name}}</p>
+          <p>{{item.store.name}}</p>
+          <div class="prices">
+            <p [ngClass]="{discount: item.product.discountPrice}">
+              {{item.product.price * item.quantity}} TL
+            </p>
+            <p *ngIf="item.product.discountPrice">
+              {{item.product.discountPrice * item.quantity}} TL
+            </p>
+          </div>
+
+          <div class="qty-selector">
+            <ion-button class="main-button">Teslim Edildi</ion-button>
+            <!-- <ion-button fill="clear" (click)="decrementQuantity(item)"
+              >-</ion-button
+            >
+            <ion-label>{{item.quantity}}</ion-label>
+            <ion-button fill="clear" (click)="incrementQuantity(item)"
+              >+</ion-button
+            > -->
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
