@@ -97,8 +97,10 @@
     </ion-toolbar> -->
   </ion-header>
 
-  <ion-content *ngIf="!searchFocused" class="ion-padding" [@contentAnimation]>
-    Fucks
+  <ion-content *ngIf="!searchFocused" [@contentAnimation]>
+    <ion-col>
+      <!-- <app-product-card [product]></app-product-card> -->
+    </ion-col>
   </ion-content>
 
   <app-search-results

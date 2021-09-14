@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonInput, MenuController, PickerController } from '@ionic/angular';
 import { ContentAnimation } from 'src/app/animations/search-animation';
+import { Product } from 'src/app/models/product';
+import { ProductService } from 'src/app/services/product/product.service';
 import { SearchBarService } from 'src/app/services/search-bar/search-bar.service';
 
 @Component({
@@ -11,6 +13,7 @@ import { SearchBarService } from 'src/app/services/search-bar/search-bar.service
 })
 export class ProductsPage implements OnInit {
   searchFocused: boolean = false;
+  products: Product[];
   @ViewChild('searchBar') searchBar: IonInput;
   sortOptions = [
     { text: 'Önerilen', value: 0, selectedIndex: 0 },
@@ -24,10 +27,15 @@ export class ProductsPage implements OnInit {
   constructor(
     private searchService: SearchBarService,
     private menuCtrl: MenuController,
-    private pickerCtrl: PickerController
+    private pickerCtrl: PickerController,
+    private productService: ProductService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    setTimeout(() => {
+      this.products = this.productService.products;
+    }, 1500);
+  }
 
   ionViewWillLeave() {
     this.closeSearch();
